@@ -4,6 +4,19 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        var tab1 = document.getElementById('tab1');
+        var tab2 = document.getElementById('tab2');
+        if (tab1.style.display === 'none') {
+            tab1.style.display = 'block';
+            tab2.style.display = 'none';
+        } else {
+            tab1.style.display = 'none';
+            tab2.style.display = 'block';
+        }
+    });
+</script>
 
 
 <header class="p-10">
@@ -35,7 +48,7 @@
 </header>
 <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+<div class="grid grid-cols-1 md:grid-cols-2">
     <div class="card-body flex flex-col justify-center items-center">
         <div class="w-full max-w-sm">
             <img src="https://media.licdn.com/dms/image/v2/D4E03AQEjV-cZEUCZXA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1729374858944?e=2147483647&v=beta&t=xm9FIrvF9lpL8lJu9j2aHRpwQFaI35o4ZxZu_FMKbf0"
@@ -64,8 +77,11 @@
             I'm a PhD student in Natural Language Processing (NLP) at Durham University specialising in
             AI for public health research
         </p>
-        <button class="btn btn-primary">Download CV</button>
-        <button class="btn">Learn More</button>
+        <div class="join join-vertical lg:join-horizontal">
+            <button class="btn btn-primary">Download CV</button>
+            <br>
+            <button class="btn">Learn More</button>
+        </div>
     </div>
 </div>
 
@@ -100,7 +116,6 @@
         Hey! I'm tab 2
     </div>
 </div>
-
 
 
 </body>
