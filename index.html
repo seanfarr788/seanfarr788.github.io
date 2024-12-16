@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="winter" style="scroll-behavior: smooth;">
 
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-
+<head>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
 <header class="fixed top-0 w-full z-50 bg-white shadow-md">
     <div class="navbar bg-base-50 flex-wrap">
-        <div class="flex-1 text-center md:text-left">
-            <a class="btn btn-ghost text-xl">Sean Farrell</a>
+        <div class="flex-1 flex justify-center md:justify-start">
+            <a class="btn btn-ghost text-xl font-bold" href="#home">Sean Farrell</a>
         </div>
         <div class="flex-none w-full md:w-auto">
             <ul class="menu menu-horizontal px-1 flex justify-center md:justify-end">
-                <li><a>Home</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a>Research Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a>Publications</a></li>
                 <li><a>Presentations</a></li>
                 <li><a>Contact Me</a></li>
             </ul>
@@ -30,501 +33,114 @@
                     <path
                         d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                 </svg>
-                <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-                </svg>
             </label>
         </div>
     </div>
 </header>
 
+<body>
 
-<button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button>
+    <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button>
 
-<br>
-<div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center pt-20">
-    <div
-        class="card card-body flex flex-col justify-center items-center m-0 p-2 sm:justify-self-end lg:justify-self-auto">
-        <div class="w-full max-w-sm">
-            <img src="assets/images/profile.png" class="rounded-lg w-full" />
-            <br>
-            <div class="stats shadow-2xl text-sm w-full">
-                <div class="stat place-items-center">
-                    <div class="stat-title">Publication</div>
-                    <div class="stat-value">10</div>
-                </div>
-                <div class="stat place-items-center">
-                    <div class="stat-title">Citations</div>
-                    <div class="stat-value text-secondary">63</div>
-                </div>
-                <div class="stat place-items-center">
-                    <div class="stat-title">H-index</div>
-                    <div class="stat-value">4</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card card-body flex flex-col justify-center m-0 p-0">
-        <div class="w-full max-w-lg	px-3">
-            <h1 class="text-5xl font-bold">Hi! 👋</h1>
-            <h2 class="text-2xl font-semibold py-2">My name is Sean</h2>
-            <p class="text-lg">
-                I'm a PhD student in Natural Language Processing (NLP) at Durham University specialising in
-                AI for public health research
-            </p>
-            <div class="flex space-x-4 py-4">
-                <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                        width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="#0069FF"
-                            d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
-                    </svg>
-                </a>
-                <a href="https://scholar.google.com/citations?user=ntcK4_cAAAAJ&hl=en" target="_blank">
-                    <svg width="22px" height="22px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#0069FF"
-                            d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
-                    </svg>
-                </a>
-                <a href="https://www.researchgate.net/profile/Sean-Farrell-9/" target="_blank">
-                    <svg width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#0069FF"
-                            d="m19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0 -.112.437 8.365 8.365 0 0 0 -.078.53 9 9 0 0 0 -.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876s-.738.35-1.227.35c-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1 -.147-.762 17.366 17.367 0 0 1 -.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0 -.466-.742 3 3 0 0 0 -.679-.607 3.313 3.313 0 0 0 -.903-.41 4.068 4.068 0 0 0 -1.142-.148zm-11.369 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" />
-                    </svg>
-                </a>
-                <a href="https://www.orcid.org/0000-0002-1358-4979" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px"
-                        height="22px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;">
-                        <style type="text/css">
-                            .st0 {
-                                fill: #0069FF;
-                            }
-
-                            .st1 {
-                                fill: #0069FF;
-                            }
-                        </style>
-                        <path class="st0"
-                            d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z" />
-                        <g>
-                            <path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z" />
-                            <path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
-		c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z" />
-                            <path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
-		C84.2,46.7,88.7,51.3,88.7,56.8z" />
-                        </g>
-                    </svg>
-                </a>
-            </div>
-            <div class="join join-vertical lg:join-horizontal py-3">
-                <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary">Download CV</a> <br>
-                <button class="btn">Learn More</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-<input type="checkbox" id="my_modal_1" class="modal-toggle" />
-<div class="modal" role="dialog">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Natural Language Processing</h3>
-        <p class="py-4">Extensive experience in frameworks such as Huggingface Transformers, scikit-learn, and
-            PyTorch. Successfully pretrained domain-specific models such as PetBERT, training of classifiers with
-            minimal
-            annotations, Retrieval Augmented Generation (RAG), topic modelling, explainability, multi-modality,
-            named entity recognition (NER), and generative models.</p>
-    </div>
-    <label class="modal-backdrop" for="my_modal_1">Close</label>
-</div>
-
-<input type="checkbox" id="my_modal_2" class="modal-toggle" />
-<div class="modal" role="dialog">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Data Analysis and Statistical Modelling</h3>
-        <p>Proficient in Python, R, and SQL. Skilled in designing scalable pipelines optimized for
-            low-resource environments and managing the analysis of very large datasets (10M+ records).
-            Proficient in Git-based version control and collaborative project management. Experienced in
-            hypothesis testing, regression analysis, and advanced statistical modelling</p>
-    </div>
-    <label class="modal-backdrop" for="my_modal_2">Close</label>
-</div>
-
-<input type="checkbox" id="my_modal_3" class="modal-toggle" />
-<div class="modal" role="dialog">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Data Visualisation</h3>
-        <p>Adept at creating clear, informative, and publication-quality visualisations using Matplotlib,
-            Seaborn, ggplot2, and Plotly. Skilled in website creation for serving models and presenting
-            visualisations in an interactive manner</p>
-    </div>
-    <label class="modal-backdrop" for="my_modal_3">Close</label>
-</div>
-
-<input type="checkbox" id="my_modal_4" class="modal-toggle" />
-<div class="modal" role="dialog">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Teaching and Mentoring</h3>
-        <p>Adept at creating clear, informative, and publication-quality visualisations using Matplotlib,
-            Seaborn, ggplot2, and Plotly. Skilled in website creation for serving models and presenting
-            visualisations in an interactive manner</p>
-    </div>
-    <label class="modal-backdrop" for="my_modal_4">Close</label>
-</div>
-
-<input type="checkbox" id="my_modal_5" class="modal-toggle" />
-<div class="modal" role="dialog">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Communication and Presentations</h3>
-        <p>Experienced in delivering technical presentations to limited prior knowledge audiences. Capable of
-            tailoring complex concepts to both expert and lay audiences, ensuring clarity and engagement. Won
-            best talk awards.</p>
-    </div>
-    <label class="modal-backdrop" for="my_modal_5">Close</label>
-</div>
-
-<input type="checkbox" id="my_modal_6" class="modal-toggle" />
-<div class="modal" role="dialog">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Ethical and Scientific Writing</h3>
-        <p>Published in peer-reviewed journals, skilled at structuring clear and concise papers, emphasising
-            reproducibility and scientific rigor. Experience in writing ethics proposals.</p>
-    </div>
-    <label class="modal-backdrop" for="my_modal_6">Close</label>
-</div>
-
-</div>
-</div>
-
-
-<div class="container mx-auto px-10 pt-10">
-    <div class="grid grid-cols-1 justify-center items-center">
-        <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body shadow-2xl" id="education">
-                <h2 class="card-title text-3xl font-bold p-5">Education</h2>
-                <h3 class="text-2xl font-semibold">PhD Computer Science (Natural Language Processing)</h3>
-                <h4 class="text-1xl font-semibold">Durham University</h4>
-                <p>Biotechnology and Biological Sciences Research Council (BBSRC) funding to explore Natural Language
-                    Processing and deep learning methods to analyse over 10 million first opinion veterinary electronic
-                    health records (EHRs) from across the UK to understand critical public health matters. Key
-                    achievements include:
-                </p>
-                <ul style="padding-left: 2%;">
-                    <li><b>PetBERT Development</b>: Designed a novel domain-specific transformer language model.</li>
-                    <li><b>Public Health Research</b>: Conducted studies on critical issues such as disease outbreak
-                        detection, socioeconomic disparities in premature mortality, and patterns of antimicrobial usage
-                        in alignment with stewardship guidelines.</li>
-                    <li><b>Open Benchmark Dataset</b>: Established the first benchmark dataset for veterinary free-text
-                        EHRs, setting a new standard for research in this field.</li>
-                    <li><b>Multimodal and Explainable AI</b>: Integrated free text and structured data with
-                        explainability tools to provide actionable insights into model decision-making processes.</li>
-                    <li><b>Multinational Collaboration</b>: Coordinated a multinational study within the EU ENOVAT
-                        project, identifying barriers for antimicrobial stewardship guideline adoption.</li>
-                    <li><b>International Protocol Leadership</b>: Leading the creation of global protocols for
-                        anonymisation, sharing of veterinary free-text EHRs and language models to promote ethical data
-                        use and collaboration.</li>
-                </ul>
-                <p>
-                    <b>Impact:</b> My research bridges computational innovation and public health applications,
-                    advocates for
-                    open science principles and setting new standards for veterinary data and model sharing
-                    <br>
-                    <b>Thesis:</b> Natural Language Processing for Early Detection and Mitigation of Critical Public
-                    Health
-                    Threats
-                </p><br>
-                <div class="divider"></div>
-                <!--undergrad-->
-                <h3 class=" text-2xl font-bold">2:1 BSc(hons) Biomedical Sciences</h3>
-                <p>University of Kent</p>
-                <p>Proficient in applying interdisciplinary knowledge across biology and healthcare to analyse and
-                    address health-related challenges. Experience in laboratory methods in Genetics, Microbiology,
-                    Biochemistry, and Immunology</p>
-                <b>Thesis:</b>
-                <p>Antimicrobial usage in hospitalised SARS-CoV-2 patients and the impact on the Gut Microbiome
-                </p>
-            </div>
-            <div
-                class="card-body flex flex-col justify-center items-center m-0 p-2 sm:justify-self-end lg:justify-self-auto w-full">
-                <div class="card-body shadow-2xl" id="Publications">
-                    <h2 class="card-title text-3xl font-bold p-5">Publications</h2>
-                    <h3 class="text-2xl font-semibold">First Authorships</h3>
-                    <ul class="p-5">
-                        <li><b>Farrell, S.</b>, Anderson, K., Noble, P.-J.M. and Al Moubayed, N. (2024). <b>Premature
-                                mortality analysis of 52,000 deceased cats and dogs exposes socioeconomic
-                                disparities.</b> Scientific Reports, 14(1). <a
-                                href="https://doi.org/10.1038/s41598-024-77385-8" target="_blank">doi:
-                                10.1038/s41598-024-77385-8</a>.</li>
-                        <li><b>Farrell, S.</b>*, Burton, J.*, Noble, P.-J.M. and Al Moubayed, N. (2024). <b>Explainable
-                                text-tabular models for predicting mortality risk in companion animals.</b> Scientific
-                            reports, 14(1). <a href="https://doi.org/10.1038/s41598-024-64551-1" target="_blank">doi:
-                                10.1038/s41598-024-64551-1</a>.</li>
-                        <li><b>Farrell, S.</b>, Appleton, C., Noble, P.-J.M. and Al Moubayed, N. (2023). <b>PetBERT:
-                                automated ICD-11 syndromic disease coding for outbreak detection in first opinion
-                                veterinary electronic health records.</b> Scientific Reports, 13(1). <a
-                                href="https://doi.org/10.1038/s41598-023-45155-7" target="_blank">doi:
-                                10.1038/s41598-023-45155-7</a>.</li>
-                        <li><b>Farrell, S.</b>, Bagcigil, A.F., Chaintoutis, S.C., Firth, C., Aydin, F.G., Hare, C.,
-                            Maaland, M., Mateus, A., Vale, A.P., Windahl, U., Damborg, P., Timofte, D., Singleton, D.A.
-                            and Allerton, F. (2023). <b>A multinational survey of companion animal veterinary
-                                clinicians: How can antimicrobial stewardship guidelines be optimised for the target
-                                stakeholder?</b> The Veterinary Journal, 303, pp.106045–106045. <a
-                                href="https://doi.org/10.1016/j.tvjl.2023.106045" target="_blank">doi:
-                                10.1016/j.tvjl.2023.106045</a>.</li>
-                        <li><b>Farrell, S.</b>, McGarry, J., Noble, P.-J.M., Pinchbeck, G.J., Cantwell, S., Radford,
-                            A.D. and Singleton, D.A. (2023). <b>Seasonality and other risk factors for fleas
-                                infestations in domestic dogs and cats.</b> Medical and Veterinary Entomology, 37(2). <a
-                                href="https://doi.org/10.1111/mve.12636" target="_blank">doi: 10.1111/mve.12636</a>.
-                        </li>
-                        <li><b>Farrell, S.</b>, Noble, P.-J.M., Pinchbeck, G.L., Brant, B., Caravaggi, A., Singleton,
-                            D.A. and Radford, A.D. (2020). <b>Seasonality and risk factors for myxomatosis in pet
-                                rabbits in Great Britain.</b> Preventive Veterinary Medicine, 176, p.104924. <a
-                                href="https://doi.org/10.1016/j.prevetmed.2020.104924" target="_blank">doi:
-                                10.1016/j.prevetmed.2020.104924</a>.</li>
-                    </ul>
-                    <h3 class="text-2xl font-semibold">Co-authorships</h3>
-                    <ul class="p-5">
-                        <li>Davies, H., Nenadic, G., Alfattni, G., Arguello Casteleiro, M., Al Moubayed, N., <b>Farrell,
-                                S.</b>, Radford, A.D. and Noble, P.-J.M. (2024). <b>Text mining for disease surveillance
-                                in veterinary clinical data: part two, training computers to identify features in
-                                clinical text.</b> Frontiers in Veterinary Science, 11. <a
-                                href="https://doi.org/10.3389/fvets.2024.1352726" target="_blank">doi:
-                                10.3389/fvets.2024.1352726</a>.</li>
-                        <li>Davies, H., Nenadic, G., Alfattni, G., Arguello Casteleiro, M., Al Moubayed, N., <b>Farrell,
-                                S.</b>, Radford, A.D. and Noble, P.-J.M. (2024). <b>Text mining for disease surveillance
-                                in veterinary clinical data: part one, the language of veterinary clinical records and
-                                searching for words.</b> Frontiers in Veterinary Science, 11. <a
-                                href="https://doi.org/10.3389/fvets.2024.1352239" target="_blank">doi:
-                                10.3389/fvets.2024.1352239</a>.</li>
-                        <li>Fins, I.S., Davies, H., <b>Farrell, S.</b>, Torres, J.R., Pinchbeck, G., Radford, A.D. and
-                            Noble, P.-J.M. (2023). <b>Evaluating ChatGPT text mining of clinical records for companion
-                                animal obesity monitoring.</b> The Veterinary Record, 194(3). <a
-                                href="https://doi.org/10.1002/vetr.3669" target="_blank">doi: 10.1002/vetr.3669</a>.
-                        </li>
-                        <li>Smith, S.L., Anderson, E.R., Cansado-Utrilla, C., Prince, T., <b>Farrell, S.</b>, Brant, B.,
-                            Smyth, S., Noble, P.-J.M., Pinchbeck, G.L., Marshall, N., Roberts, L., Hughes, G.L.,
-                            Radford, A.D. and Patterson, E.I. (2021). <b>SARS-CoV-2 neutralising antibodies in dogs and
-                                cats in the United Kingdom.</b> Current Research in Virological Science, 2, p.100011. <a
-                                href="https://doi.org/10.1016/j.crviro.2021.100011" target="_blank">doi:
-                                10.1016/j.crviro.2021.100011</a>.</li>
-                    </ul>
-                    <h3 class="text-2xl font-semibold">In review</h3>
-                    <ul class="p-5">
-                        <li><b>Farrell, S.</b>, Radford, A.D., Noble, P.-J.M. & Al Moubayed, N. <b>PetEVAL: A veterinary
-                                free text electronic health records benchmark for the anonymisation and identification
-                                of disease patterns.</b> [In review]</li>
-                        <li><b>Farrell, S.</b>, Singleton, D.A., Radford, A.D., Pinchbeck G., Noble, P.-J.M. & Al
-                            Moubayed, N. <b>Automated Disease Classification of Veterinary Clinical Narratives for
-                                Antimicrobial Stewardship Guideline Monitoring.</b> [In review]</li>
-                        <li>Noble, P.-J.M., <b>Farrell, S.</b>, Al Moubayed, N. & Radford, A.D., <b>Comprehensive
-                                representation of health-related phenotypes in one million dogs using topic modelling of
-                                electronic health records.</b> [In review]</li>
-                    </ul>
-                </div>
-            </div>
-            <div
-                class="card-body flex flex-col justify-center items-center m-0 p-2 sm:justify-self-end lg:justify-self-auto w-full">
-                <div class="card-body shadow-2xl" id="Publications">
-                    <h2 class="card-title text-3xl font-bold p-5">Conferences and Presentations</h2>
-                    <div class="overflow-x-auto">
-                        <table class="table">
-                            <!-- head -->
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Venue</th>
-                                    <th>Location</th>
-                                    <th>Date</th>
-                                    <th>Type</th>
-                                    <th>Link</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row 1 -->
-                                <tr>
-                                    <td>Syndromic Disease Surveillance and Multi-label Classifiers for Antimicrobial
-                                        Usage Assessment</td>
-                                    <td>Association for Veterinary Informatics Talbot Veterinary Informatics Symposium
-                                    </td>
-                                    <td>Virginia-Tech University, USA</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 2 -->
-                                <tr class="hover">
-                                    <td>PetBERT: Applications in Veterinary Syndromic Disease Surveillance</td>
-                                    <td>Symposium on Artificial Intelligence in Veterinary Medicine</td>
-                                    <td>Cornell University, USA</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Where are all the antimicrobials being used? LLM’s for monitoring adherence to
-                                        antimicrobial stewardship guidelines in veterinary practices</td>
-                                    <td>HealTAC Annual Conference</td>
-                                    <td>Lancaster University, UK</td>
-                                    <td>1/06/2024</td>
-                                    <td>Poster</td>
-                                    <td><a href="assets/posters/healtac_2024.pdf" download
-                                            class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Disease Outbreak Detection Using Large Language Models</td>
-                                    <td>Annual BBSRC NLD DTP Conference</td>
-                                    <td>Durham University, UK</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Survey Results on what do clinicians want from their antimicrobial stewardship
-                                        guidelines</td>
-                                    <td>European Network for the Optimisation of Veterinary Antimicrobial Therapy
-                                        (ENOVAT) Meeting</td>
-                                    <td>University of Copenhagen, Netherlands</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Syndromic Disease Classification of Veterinary EHR Notes for Disease Outbreak
-                                        Detection</td>
-                                    <td>HealTAC Annual Conference </td>
-                                    <td>University of Manchester, UK</td>
-                                    <td>1/06/2024</td>
-                                    <td>Poster</td>
-                                    <td><a href="assets/posters/healtac_2023.pdf" download
-                                            class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Predictive Power of Large Language Models in Determining Mortality Risks in
-                                        Companion Animals</td>
-                                    <td>Annual BBSRC NLD DTP Conference</td>
-                                    <td>Durham University, UK</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Syndromic Surveillance for Understanding Antimicrobial Usage in the veterinary
-                                        community</td>
-                                    <td>Medical Research Foundation National PhD Conference</td>
-                                    <td>University of Bristol, UK</td>
-                                    <td>1/06/2024</td>
-                                    <td>Poster</td>
-                                    <td><a href="assets/posters/bristol_2022.pdf" download
-                                            class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Current Status of multinational survey of companion animal veterinary
-                                        clinicians: How can antimicrobial stewardship guidelines be optimised for the
-                                        target stakeholder?</td>
-                                    <td>European Network for the Optimisation of Veterinary Antimicrobial Therapy
-                                        (ENOVAT) Meeting </td>
-                                    <td>Aristotle University of Thessaloniki, Greece</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Introduction to Natural Language Processing</td>
-                                    <td>NGSchool Machine Learning in Computational Biology</td>
-                                    <td>Warsaw, Poland</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-primary">Download</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+    <div class="container mx-auto mt-60 md:mt-30" id="home">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+            <!-- First Card -->
+            <div class="flex justify-center md:justify-end items-center">
+                <div class="card card-body flex flex-col justify-center items-center m-0 p-2">
+                    <div class="w-full max-w-sm">
+                        <div class="bg-primary rounded-t-full overflow-hidden w-full">
+                            <img src="assets/images/profile.png" />
+                        </div>
+                        <div class="stats shadow-2xl text-sm w-full">
+                            <div class="stat place-items-center">
+                                <div class="stat-title">Publication</div>
+                                <div class="stat-value">10</div>
+                            </div>
+                            <div class="stat place-items-center">
+                                <div class="stat-title">Citations</div>
+                                <div class="stat-value text-secondary">63</div>
+                            </div>
+                            <div class="stat place-items-center">
+                                <div class="stat-title">H-index</div>
+                                <div class="stat-value">4</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card-body shadow-2xl" id="experience">
-                <h2 class="card-title text-3xl font-bold p-5">Experience</h2>
-                <h3 class="text-2xl font-bold">Data Science Intern @ Evergreen Life</h3>
-                <h5 class="text-1xl font-semibold">June 2024 – September 2024</h5>
-                <p>
-                <ul>
-                    <li>Developed a Retrieval Augmented Generation pipeline utilising generative language model (LLM) to
-                        deliver personalised healthcare advice, ensuring information safety and accuracy by aligning
-                        outputs with the Evergreen Life article repository.</li>
-                    <li>Designed an algorithm-driven content recommendation system, tailoring advice to individual user
-                        needs.</li>
-                    <li>My work is being integrated into an app serving over 1 million NHS patients, enhancing its
-                        capability to provide personalised, reliable healthcare guidance.</li>
-                </ul>
-                </p>
-                <div class="divider"></div>
-                <!--Demonstrator-->
-                <h3 class="text-2xl font-bold">Natural Language Processing Demonstrator @ Durham University</h3>
-                <h5 class="text-1xl font-semibold">January 2021 – Present</h5>
-                <p>
-                <ul>
-                    <li>Delivered comprehensive NLP curriculum from foundational machine learning to advanced Deep
-                        Learning and Transformers, adapting technical content for diverse audiences ranging from MSc
-                        Computer Science to MBA Business Analytics students.</li>
-                </ul>
-                </p>
-                <div class="divider"></div>
-                <!--undergrad 2 -->
-                <h3 class="text-2xl font-bold">Undergraduate Researcher @ University of Liverpool</h3>
-                <h5 class="text-1xl font-semibold">July 2020 – September 2021</h5>
-                <p>
-                <ul>
-                    <li>Conducted research on geospatial and risk factors for fleas as a second-year undergraduate.</li>
-                    <li>Utilised electronic health records (EHRs) from over 34,000 animals across UK first-opinion
-                        veterinary practices.</li>
-                    <li>Published paper in the Journal of Medical and Veterinary Entomology </li>
-                </ul>
-                </p>
-                <div class="divider"></div>
-                <!--undergrad 1 -->
-                <h3 class="text-2xl font-bold">Undergraduate Researcher @ University of Liverpool</h3>
-                <h5 class="text-1xl font-semibold">June 2019 – January 2020</h5>
-                <p>
-                <ul>
-                    <li>Conducted research on geospatial and risk factors for Myxomatosis as a first-year undergraduate.
-                    </li>
-                    <li>First exposure to large-scale data analytics, applying statistical methodologies such as
-                        multivariate logistic modelling for risk factor analysis.</li>
-                    <li>Secured funding to produce and distribute educational posters summarising research findings to
-                        veterinary practices across the UK.</li>
-                    <li>Published paper in the Journal of Preventive Veterinary Medicine</li>
-                </ul>
-                </p>
-                <div class="divider"></div>
-                <!--sainsburys -->
-                <h3 class="text-2xl font-bold">Customer Experience Supervisor @ Sainsbury's</h3>
-                <h5 class="text-1xl font-semibold">October 2016 – September 2021</h5>
+
+            <!-- Second Card -->
+            <div class="card card-body flex flex-col justify-center">
+                <div class="w-full max-w-lg py-5">
+                    <h1 class="text-5xl font-bold">Hi! 👋</h1>
+                    <h2 class="text-2xl font-semibold py-2">My name is Sean</h2>
+                    <p class="text-lg">
+                        I'm a PhD student in Natural Language Processing (NLP) at Durham University specialising in
+                        AI for public health research
+                    </p>
+                    <div class="flex space-x-4 py-4">
+                        <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#0069FF"
+                                    d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+                            </svg>
+                        </a>
+                        <!---->
+                        <a href="https://scholar.google.com/citations?user=ntcK4_cAAAAJ&hl=en" target="_blank">
+                            <svg width="22px" height="22px" viewBox="0 0 24 24" role="img"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#0069FF"
+                                    d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Sean-Farrell-9/" target="_blank">
+                            <svg width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#0069FF"
+                                    d="m19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0 -.112.437 8.365 8.365 0 0 0 -.078.53 9 9 0 0 0 -.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876s-.738.35-1.227.35c-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1 -.147-.762 17.366 17.367 0 0 1 -.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0 -.466-.742 3 3 0 0 0 -.679-.607 3.313 3.313 0 0 0 -.903-.41 4.068 4.068 0 0 0 -1.142-.148zm-11.369 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.orcid.org/0000-0002-1358-4979" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="22px" height="22px" viewBox="0 0 256 256"
+                                style="enable-background:new 0 0 256 256;">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: #0069FF;
+                                    }
+
+                                    .st1 {
+                                        fill: #FFFFFF;
+                                    }
+                                </style>
+                                <path class="st0"
+                                    d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z" />
+                                <g>
+                                    <path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z" />
+                                    <path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
+		c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z" />
+                                    <path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
+		C84.2,46.7,88.7,51.3,88.7,56.8z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="join join-vertical lg:join-horizontal py-3">
+                        <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary"
+                            target="_blank">Download
+                            CV</a> <br>
+                        <button class="btn" onclick="location.href='#education'">Learn More</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-</body>
+
+
 <footer class="footer footer-center bg-primary text-primary-content pt-10">
     <aside>
-        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-            clip-rule="evenodd" class="inline-block fill-current">
-            <path
-                d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
-            </path>
-        </svg>
+        <p class="text-5xl">👋</p>
         <p class="font-bold">
             Sean Farrell
         </p>
