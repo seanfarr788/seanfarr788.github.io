@@ -8,18 +8,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+
 <header class="fixed top-0 w-full z-50 bg-base-100 shadow-md">
     <div class="navbar flex-wrap">
         <div class="flex-1 flex justify-between items-center">
             <a class="btn btn-ghost text-xl font-bold" href="#home">Sean Farrell</a>
             <button id="menu-toggle" class="block md:hidden focus:outline-none">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
         </div>
         <div id="menu" class="hidden md:flex md:items-center w-full md:w-auto">
-            <ul class="menu menu-horizontal px-1 flex flex-col md:flex-row justify-center md:justify-end w-full md:w-auto">
+            <ul class="menu menu-horizontal flex flex-col md:flex-row justify-center md:justify-end w-full md:w-auto">
                 <li><a href="#">Home</a></li>
                 <li><a href="#research-skills">Research Skills</a></li>
                 <li><a href="#education">Education</a></li>
@@ -31,11 +41,15 @@
                     <div class="flex-none w-full md:w-auto flex justify-center md:justify-end">
                         <label class="swap swap-rotate">
                             <input type="checkbox" class="theme-controller" value="dark" />
-                            <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                            <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
                             </svg>
-                            <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                            <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                             </svg>
                         </label>
                     </div>
@@ -45,18 +59,12 @@
     </div>
 </header>
 
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        var menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
-    });
-</script>
 
-<body>
+
+<body class="pt-20">
 
     <!-- <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button> -->
-
-    <div class="container mx-auto mt-60 md:mt-30 pb-15">
+    <div class="container mx-auto pb-15">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center">
             <!-- First Card -->
             <div class="flex justify-center md:justify-end items-center">
@@ -64,7 +72,7 @@
                     <div class="w-full max-w-sm">
                         <div class="bg-primary rounded-t-full overflow-hidden w-full">
                             <img class="duration-300 hover:scale-105" src="assets/images/profile.png" />
-                        </div>                    
+                        </div>
                         <div class="stats shadow-2xl text-sm w-full">
                             <div class="stat place-items-center">
                                 <div class="stat-title">Publication</div>
@@ -141,14 +149,15 @@
                         </a>
                     </div>
                     <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 py-3">
-                        <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary" target="_blank">Download CV</a>
+                        <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary"
+                            target="_blank">Download CV</a>
                         <button class="btn" onclick="location.href='#research-skills'">Learn More</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section id="research-skills"></section> 
+    <section id="research-skills"></section>
     <br>
     <div class="container mx-auto pb-10">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center mx-10">
@@ -204,336 +213,336 @@
         <div class="grid grid-cols-1 justify-center items-center">
             <!-- Education Card -->
             <section id="education"></section>
-                <div
-                    class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-                    <div class="card-body w-100 shadow-2xl border border-grey rounded">
-                        <h2 class="card-title text-3xl font-bold p-5">Education</h2>
-                        <h3 class="text-2xl font-semibold px-5">PhD Computer Science (Natural Language Processing)</h3>
-                        <h4 class="text-1xl font-semibold px-5">Durham University</h4>
-                        <p class="px-5">Biotechnology and Biological Sciences Research Council (BBSRC) funding to
-                            explore
-                            Natural
-                            Language Processing and deep learning methods to analyse over 10 million first opinion
-                            veterinary
-                            electronic
-                            health records (EHRs) from across the UK to understand critical public health matters. Key
-                            achievements include:
-                        </p>
-                        <ul style="padding-left: 2%;">
-                            <li><b>PetBERT Development</b>: Designed a novel domain-specific transformer language model.
-                            </li>
-                            <li><b>Public Health Research</b>: Conducted studies on critical issues such as disease
-                                outbreak
-                                detection, socioeconomic disparities in premature mortality, and patterns of
-                                antimicrobial
-                                usage
-                                in alignment with stewardship guidelines.</li>
-                            <li><b>Open Benchmark Dataset</b>: Established the first benchmark dataset for veterinary
-                                free-text
-                                EHRs, setting a new standard for research in this field.</li>
-                            <li><b>Multimodal and Explainable AI</b>: Integrated free text and structured data with
-                                explainability tools to provide actionable insights into model decision-making
-                                processes.
-                            </li>
-                            <li><b>Multinational Collaboration</b>: Coordinated a multinational study within the EU
-                                ENOVAT
-                                project, identifying barriers for antimicrobial stewardship guideline adoption.</li>
-                            <li><b>International Protocol Leadership</b>: Leading the creation of global protocols for
-                                anonymisation, sharing of veterinary free-text EHRs and language models to promote
-                                ethical
-                                data
-                                use and collaboration.</li>
-                        </ul>
-                        <p class="p-5">
-                            <b>Impact:</b> My research bridges computational innovation and public health applications,
-                            advocates for
-                            open science principles and setting new standards for veterinary data and model sharing
-                            <br>
-                            <b>Thesis:</b> Natural Language Processing for Early Detection and Mitigation of Critical
-                            Public
-                            Health
-                            Threats
-                        </p><br>
-                        <div class="divider"></div>
-                        <!--undergrad-->
-                        <h3 class="text-2xl font-bold px-5">2:1 BSc(hons) Biomedical Sciences</h3>
-                        <p class="text-1xl font-semibold px-5">University of Kent</p>
-                        <p class="px-5">Proficient in applying interdisciplinary knowledge across biology and healthcare
-                            to
-                            analyse and
-                            address health-related challenges. Experience in laboratory methods in Genetics,
-                            Microbiology,
-                            Biochemistry, and Immunology</p>
-                        <p class="p-5"><b>Thesis:</b> Antimicrobial usage in hospitalised SARS-CoV-2 patients and the
-                            impact
-                            on the Gut Microbiome
-                        </p>
-                    </div>
+            <div
+                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
+                <div class="card-body w-100 shadow-2xl border border-grey rounded">
+                    <h2 class="card-title text-3xl font-bold p-5">Education</h2>
+                    <h3 class="text-2xl font-semibold px-5">PhD Computer Science (Natural Language Processing)</h3>
+                    <h4 class="text-1xl font-semibold px-5">Durham University</h4>
+                    <p class="px-5">Biotechnology and Biological Sciences Research Council (BBSRC) funding to
+                        explore
+                        Natural
+                        Language Processing and deep learning methods to analyse over 10 million first opinion
+                        veterinary
+                        electronic
+                        health records (EHRs) from across the UK to understand critical public health matters. Key
+                        achievements include:
+                    </p>
+                    <ul style="padding-left: 2%;">
+                        <li><b>PetBERT Development</b>: Designed a novel domain-specific transformer language model.
+                        </li>
+                        <li><b>Public Health Research</b>: Conducted studies on critical issues such as disease
+                            outbreak
+                            detection, socioeconomic disparities in premature mortality, and patterns of
+                            antimicrobial
+                            usage
+                            in alignment with stewardship guidelines.</li>
+                        <li><b>Open Benchmark Dataset</b>: Established the first benchmark dataset for veterinary
+                            free-text
+                            EHRs, setting a new standard for research in this field.</li>
+                        <li><b>Multimodal and Explainable AI</b>: Integrated free text and structured data with
+                            explainability tools to provide actionable insights into model decision-making
+                            processes.
+                        </li>
+                        <li><b>Multinational Collaboration</b>: Coordinated a multinational study within the EU
+                            ENOVAT
+                            project, identifying barriers for antimicrobial stewardship guideline adoption.</li>
+                        <li><b>International Protocol Leadership</b>: Leading the creation of global protocols for
+                            anonymisation, sharing of veterinary free-text EHRs and language models to promote
+                            ethical
+                            data
+                            use and collaboration.</li>
+                    </ul>
+                    <p class="p-5">
+                        <b>Impact:</b> My research bridges computational innovation and public health applications,
+                        advocates for
+                        open science principles and setting new standards for veterinary data and model sharing
+                        <br>
+                        <b>Thesis:</b> Natural Language Processing for Early Detection and Mitigation of Critical
+                        Public
+                        Health
+                        Threats
+                    </p><br>
+                    <div class="divider"></div>
+                    <!--undergrad-->
+                    <h3 class="text-2xl font-bold px-5">2:1 BSc(hons) Biomedical Sciences</h3>
+                    <p class="text-1xl font-semibold px-5">University of Kent</p>
+                    <p class="px-5">Proficient in applying interdisciplinary knowledge across biology and healthcare
+                        to
+                        analyse and
+                        address health-related challenges. Experience in laboratory methods in Genetics,
+                        Microbiology,
+                        Biochemistry, and Immunology</p>
+                    <p class="p-5"><b>Thesis:</b> Antimicrobial usage in hospitalised SARS-CoV-2 patients and the
+                        impact
+                        on the Gut Microbiome
+                    </p>
                 </div>
+            </div>
             <!--Publications Card-->
             <section id="publications"></section>
-                <div
-                    class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-                    <div class="overflow-x-auto w-full shadow-2xl border border-grey rounded bg-base-100">
-                        <div class="card-body w-100">
-                            <h2 class="card-title text-3xl font-bold p-5">Publications</h2>
-                            <h3 class="text-2xl font-semibold  p-5">First Authorships</h3>
-                            <div class="overflow-x-auto">
-                                <table class="table">
-                                    <!-- head -->
-                                    <thead>
-                                        <tr>
-                                            <th>Title</th>
-                                            <th>Authors</th>
-                                            <th>Venue</th>
-                                            <th>Date</th>
-                                            <th>Link</th>
-                                            <th>Download</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Premature mortality analysis of 52,000 deceased cats and dogs exposes
-                                                socioeconomic
-                                                disparities.</td>
-                                            <td><b>Farrell, S.</b>, Anderson, K., Noble, P.-J.M. and Al Moubayed, N.
-                                            </td>
-                                            <td>Scientific Reports</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1038/s41598-024-77385-8" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Explainable text-tabular models for predicting mortality risk in
-                                                companion
-                                                animals.</td>
-                                            <td><b>Farrell, S.</b>*, Burton, J.*, Noble, P.-J.M. and Al Moubayed, N.
-                                            </td>
-                                            <td>Scientific Reports</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1038/s41598-024-64551-1" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>PetBERT:
-                                                automated ICD-11 syndromic disease coding for outbreak detection in
-                                                first
-                                                opinion
-                                                veterinary electronic health records.</td>
-                                            <td><b>Farrell, S.</b>, Appleton, C., Noble, P.-J.M. and Al Moubayed, N.
-                                            </td>
-                                            <td>Scientific Reports</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1038/s41598-023-45155-7" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>A multinational survey of companion animal veterinary
-                                                clinicians: How can antimicrobial stewardship guidelines be optimised
-                                                for the
-                                                target
-                                                stakeholder?</td>
-                                            <td><b>Farrell, S.</b>, Bagcigil, A.F., Chaintoutis, S.C., Firth, C., Aydin,
-                                                F.G.,
-                                                Hare, C.,
-                                                Maaland, M., Mateus, A., Vale, A.P., Windahl, U., Damborg, P., Timofte,
-                                                D.,
-                                                Singleton,
-                                                D.A.
-                                                and Allerton, F.</td>
-                                            <td>The Veterinary Journal</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Seasonality and other risk factors for fleas infestations in domestic
-                                                dogs and
-                                                cats.</td>
-                                            <td><b>Farrell, S.</b>, McGarry, J., Noble, P.-J.M., Pinchbeck, G.J.,
-                                                Cantwell, S.,
-                                                Radford,
-                                                A.D. and Singleton, D.A.
-                                            <td>Medical and Veterinary Entomology</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Seasonality and risk factors for myxomatosis in pet rabbits in Great
-                                                Britain.
-                                            </td>
-                                            <td><b>Farrell, S.</b>, Noble, P.-J.M., Pinchbeck, G.L., Brant, B.,
-                                                Caravaggi, A.,
-                                                Singleton, D.A. and Radford, A.D.</td>
-                                            <td>Preventive Veterinary Medicine</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
+            <div
+                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
+                <div class="overflow-x-auto w-full shadow-2xl border border-grey rounded bg-base-100">
+                    <div class="card-body w-100">
+                        <h2 class="card-title text-3xl font-bold p-5">Publications</h2>
+                        <h3 class="text-2xl font-semibold  p-5">First Authorships</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Authors</th>
+                                        <th>Venue</th>
+                                        <th>Date</th>
+                                        <th>Link</th>
+                                        <th>Download</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Premature mortality analysis of 52,000 deceased cats and dogs exposes
+                                            socioeconomic
+                                            disparities.</td>
+                                        <td><b>Farrell, S.</b>, Anderson, K., Noble, P.-J.M. and Al Moubayed, N.
+                                        </td>
+                                        <td>Scientific Reports</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1038/s41598-024-77385-8" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Explainable text-tabular models for predicting mortality risk in
+                                            companion
+                                            animals.</td>
+                                        <td><b>Farrell, S.</b>*, Burton, J.*, Noble, P.-J.M. and Al Moubayed, N.
+                                        </td>
+                                        <td>Scientific Reports</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1038/s41598-024-64551-1" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>PetBERT:
+                                            automated ICD-11 syndromic disease coding for outbreak detection in
+                                            first
+                                            opinion
+                                            veterinary electronic health records.</td>
+                                        <td><b>Farrell, S.</b>, Appleton, C., Noble, P.-J.M. and Al Moubayed, N.
+                                        </td>
+                                        <td>Scientific Reports</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1038/s41598-023-45155-7" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>A multinational survey of companion animal veterinary
+                                            clinicians: How can antimicrobial stewardship guidelines be optimised
+                                            for the
+                                            target
+                                            stakeholder?</td>
+                                        <td><b>Farrell, S.</b>, Bagcigil, A.F., Chaintoutis, S.C., Firth, C., Aydin,
+                                            F.G.,
+                                            Hare, C.,
+                                            Maaland, M., Mateus, A., Vale, A.P., Windahl, U., Damborg, P., Timofte,
+                                            D.,
+                                            Singleton,
+                                            D.A.
+                                            and Allerton, F.</td>
+                                        <td>The Veterinary Journal</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Seasonality and other risk factors for fleas infestations in domestic
+                                            dogs and
+                                            cats.</td>
+                                        <td><b>Farrell, S.</b>, McGarry, J., Noble, P.-J.M., Pinchbeck, G.J.,
+                                            Cantwell, S.,
+                                            Radford,
+                                            A.D. and Singleton, D.A.
+                                        <td>Medical and Veterinary Entomology</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Seasonality and risk factors for myxomatosis in pet rabbits in Great
+                                            Britain.
+                                        </td>
+                                        <td><b>Farrell, S.</b>, Noble, P.-J.M., Pinchbeck, G.L., Brant, B.,
+                                            Caravaggi, A.,
+                                            Singleton, D.A. and Radford, A.D.</td>
+                                        <td>Preventive Veterinary Medicine</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="divider"></div>
-                            <h3 class="text-2xl font-semibold p-5">Co-authorships</h3>
-                            <div class="overflow-x-auto">
-                                <table class="table">
-                                    <!-- head -->
-                                    <thead>
-                                        <tr>
-                                            <th>Title</th>
-                                            <th>Authors</th>
-                                            <th>Venue</th>
-                                            <th>Date</th>
-                                            <th>Link</th>
-                                            <th>Download</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Text mining for disease surveillance in veterinary clinical data: part
-                                                two,
-                                                training computers to identify features in
-                                                clinical text.</td>
-                                            <td>Davies, H., Nenadic, G., Alfattni, G., Arguello Casteleiro, M., Al
-                                                Moubayed, N.,
-                                                <b>Farrell, S.</b>, Radford, A.D. and Noble, P.-J.M..
-                                            </td>
-                                            <td>Frontiers in Veterinary Science</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Text mining for disease surveillance in veterinary clinical data: part
-                                                two,
-                                                training computers to identify features in
-                                                clinical text.</td>
-                                            <td>Davies, H., Nenadic, G., Alfattni, G., Arguello Casteleiro, M., Al
-                                                Moubayed, N.,
-                                                <b>Farrell, S.</b>, Radford, A.D. and Noble, P.-J.M..
-                                            </td>
-                                            <td>Frontiers in Veterinary Science</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Evaluating ChatGPT text mining of clinical records for companion animal
-                                                obesity
-                                                monitoring.</td>
-                                            <td>Fins, I.S., Davies, H., <b>Farrell, S.</b>, Torres, J.R., Pinchbeck, G.,
-                                                Radford, A.D.
-                                                and Noble, P.-J.M. </td>
-                                            <td>The Veterinary Record</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1002/vetr.3669" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>SARS-CoV-2 neutralising antibodies in dogs and cats in the United
-                                                Kingdom.</td>
-                                            <td>Smith, S.L., Anderson, E.R., Cansado-Utrilla, C., Prince, T.,
-                                                <b>Farrell,
-                                                    S.</b>, Brant,
-                                                B.,
-                                                Smyth, S., Noble, P.-J.M., Pinchbeck, G.L., Marshall, N., Roberts, L.,
-                                                Hughes,
-                                                G.L.,
-                                                Radford, A.D. and Patterson, E.I.
-                                            </td>
-                                            <td>Current Research in Virological Science</td>
-                                            <td>1/06/2024</td>
-                                            <td><a href="" download class="btn btn-primary">Link</a></td>
-                                            <td><a href="https://doi.org/10.1016/j.crviro.2021.100011" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="divider"></div>
-                            <h3 class="text-2xl font-semibold  p-5">In Review</h3>
-                            <div class="overflow-x-auto">
-                                <table class="table">
-                                    <!-- head -->
-                                    <thead>
-                                        <tr>
-                                            <th>Title</th>
-                                            <th>Authors</th>
-                                            <th>Venue</th>
-                                            <th>Date</th>
-                                            <th>Link</th>
-                                            <th>Download</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>PetEVAL: A veterinary free text electronic health records benchmark for
-                                                the
-                                                anonymisation and
-                                                identification of disease patterns.</td>
-                                            <td><b>Farrell, S.</b>, Radford, A.D., Noble, P.-J.M. & Al Moubayed, N.</td>
-                                            <td>In Review</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Automated Disease Classification of Veterinary Clinical Narratives for
-                                                Antimicrobial Stewardship Guideline Monitoring.</td>
-                                            <td><b>Farrell, S.</b>, Singleton, D.A., Radford, A.D., Pinchbeck G., Noble,
-                                                P.-J.M.
-                                                & Al
-                                                Moubayed, N.</td>
-                                            <td>In Review</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                        <!-- row -->
-                                        <tr>
-                                            <td>Comprehensive representation of health-related phenotypes in one million
-                                                dogs
-                                                using topic
-                                                modelling of electronic health records.</td>
-                                            <td>Noble, P.-J.M., <b>Farrell, S.</b>, Al Moubayed, N. & Radford, A.D.,
-                                            </td>
-                                            <td>In Review</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
-                                                    class="btn btn-primary">Download</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="divider"></div>
+                        <h3 class="text-2xl font-semibold p-5">Co-authorships</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Authors</th>
+                                        <th>Venue</th>
+                                        <th>Date</th>
+                                        <th>Link</th>
+                                        <th>Download</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Text mining for disease surveillance in veterinary clinical data: part
+                                            two,
+                                            training computers to identify features in
+                                            clinical text.</td>
+                                        <td>Davies, H., Nenadic, G., Alfattni, G., Arguello Casteleiro, M., Al
+                                            Moubayed, N.,
+                                            <b>Farrell, S.</b>, Radford, A.D. and Noble, P.-J.M..
+                                        </td>
+                                        <td>Frontiers in Veterinary Science</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Text mining for disease surveillance in veterinary clinical data: part
+                                            two,
+                                            training computers to identify features in
+                                            clinical text.</td>
+                                        <td>Davies, H., Nenadic, G., Alfattni, G., Arguello Casteleiro, M., Al
+                                            Moubayed, N.,
+                                            <b>Farrell, S.</b>, Radford, A.D. and Noble, P.-J.M..
+                                        </td>
+                                        <td>Frontiers in Veterinary Science</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Evaluating ChatGPT text mining of clinical records for companion animal
+                                            obesity
+                                            monitoring.</td>
+                                        <td>Fins, I.S., Davies, H., <b>Farrell, S.</b>, Torres, J.R., Pinchbeck, G.,
+                                            Radford, A.D.
+                                            and Noble, P.-J.M. </td>
+                                        <td>The Veterinary Record</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1002/vetr.3669" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>SARS-CoV-2 neutralising antibodies in dogs and cats in the United
+                                            Kingdom.</td>
+                                        <td>Smith, S.L., Anderson, E.R., Cansado-Utrilla, C., Prince, T.,
+                                            <b>Farrell,
+                                                S.</b>, Brant,
+                                            B.,
+                                            Smyth, S., Noble, P.-J.M., Pinchbeck, G.L., Marshall, N., Roberts, L.,
+                                            Hughes,
+                                            G.L.,
+                                            Radford, A.D. and Patterson, E.I.
+                                        </td>
+                                        <td>Current Research in Virological Science</td>
+                                        <td>1/06/2024</td>
+                                        <td><a href="" download class="btn btn-primary">Link</a></td>
+                                        <td><a href="https://doi.org/10.1016/j.crviro.2021.100011" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="divider"></div>
+                        <h3 class="text-2xl font-semibold  p-5">In Review</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Authors</th>
+                                        <th>Venue</th>
+                                        <th>Date</th>
+                                        <th>Link</th>
+                                        <th>Download</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>PetEVAL: A veterinary free text electronic health records benchmark for
+                                            the
+                                            anonymisation and
+                                            identification of disease patterns.</td>
+                                        <td><b>Farrell, S.</b>, Radford, A.D., Noble, P.-J.M. & Al Moubayed, N.</td>
+                                        <td>In Review</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Automated Disease Classification of Veterinary Clinical Narratives for
+                                            Antimicrobial Stewardship Guideline Monitoring.</td>
+                                        <td><b>Farrell, S.</b>, Singleton, D.A., Radford, A.D., Pinchbeck G., Noble,
+                                            P.-J.M.
+                                            & Al
+                                            Moubayed, N.</td>
+                                        <td>In Review</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                    <!-- row -->
+                                    <tr>
+                                        <td>Comprehensive representation of health-related phenotypes in one million
+                                            dogs
+                                            using topic
+                                            modelling of electronic health records.</td>
+                                        <td>Noble, P.-J.M., <b>Farrell, S.</b>, Al Moubayed, N. & Radford, A.D.,
+                                        </td>
+                                        <td>In Review</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td><a href="https://doi.org/10.3389/fvets.2024.1352726" download
+                                                class="btn btn-primary">Download</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
         <!--Presentations Card-->
         <section id="presentations"></section>
@@ -732,6 +741,38 @@
                 <h5 class="text-1xl font-semibold px-5">October 2016 – September 2021</h5>
             </div>
         </div>
+        <!-- Contact Card -->
+        <section id="contact"></section>
+        <div
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded">
+                <h2 class="card-title text-3xl font-bold p-5 justify-center items-center">Contact Me</h2>
+                <h2 class="text-xl px-5">Feel free to reach out for collaborations, job opportunities, or just a
+                    chat—I’d be happy to connect!</h2>
+                <div
+                    class="flex flex-col sm:flex-row justify-center items-center mt-4 space-y-2 sm:space-y-0 sm:space-x-2">
+                    <a href="mailto:sean.farrell2@durham.ac.uk" class="btn btn-primary">Email Me</a>
+                    <a href="https://www.linkedin.com/in/seanoliverfarrell" class="btn btn-primary">Linkedin Me</a>
+                    <button id="copy-email" class="btn">Copy Email</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full hidden">Email copied!</div>
+
+        <script>
+            document.getElementById('copy-email').addEventListener('click', function () {
+                const email = 'sean.farrell2@durham.ac.uk';
+                navigator.clipboard.writeText(email).then(function () {
+                    const toast = document.getElementById('toast');
+                    toast.classList.remove('hidden');
+                    setTimeout(function () {
+                        toast.classList.add('hidden');
+                    }, 3000);
+                });
+            });
+        </script>
     </div>
 
     <footer class="footer footer-center bg-primary text-primary-content pt-10 bottom-0 w-full">
