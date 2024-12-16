@@ -8,13 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-        var menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
-    });
-</script>
-
 
 <header class="fixed top-0 w-full z-50 bg-base-100 shadow-md">
     <div class="navbar flex-wrap">
@@ -58,7 +51,12 @@
         </div>
     </div>
 </header>
-
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 
 <body class="pt-20">
