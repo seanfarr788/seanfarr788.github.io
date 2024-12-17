@@ -78,8 +78,7 @@
                             </div>
                             <div class="stat place-items-center">
                                 <div class="stat-title">Citations</div>
-                                <div class="stat-value text-primary"><a
-                                        href="#publications">60</a></div>
+                                <div class="stat-value text-primary"><a href="#publications">60</a></div>
                             </div>
                             <div class="stat place-items-center">
                                 <div class="stat-title">H-index</div>
@@ -93,48 +92,105 @@
             <!-- Second Card -->
             <div class="card card-body flex flex-col justify-center">
                 <div class="w-full max-w-lg py-5">
-                    <h1 class="text-5xl font-bold">Hi! 👋</h1>
+                    <h1 class="text-5xl font-bold">Hi! <span class="wave">👋</span></h1>
+
+                    <style>
+                        @keyframes wave {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+
+                            10% {
+                                transform: rotate(14deg);
+                            }
+
+                            20% {
+                                transform: rotate(-8deg);
+                            }
+
+                            30% {
+                                transform: rotate(14deg);
+                            }
+
+                            40% {
+                                transform: rotate(-4deg);
+                            }
+
+                            50% {
+                                transform: rotate(10deg);
+                            }
+
+                            60% {
+                                transform: rotate(0deg);
+                            }
+
+                            100% {
+                                transform: rotate(0deg);
+                            }
+                        }
+
+                        .wave {
+                            display: inline-block;
+                            transform-origin: 70% 70%;
+                            animation: wave 2s;
+                        }
+                    </style>
                     <h2 class="text-2xl font-semibold py-2">My name is Sean</h2>
                     <p class="text-lg">
-                        I'm a PhD student in Natural Language Processing (NLP) at Durham University specialising in AI for public health research.
+                        I'm a PhD student in Natural Language Processing (NLP) at Durham University specialising in AI
+                        for public health research.
                     </p>
                     <div class="flex justify-center md:justify-start space-x-4 py-4 text-primary">
-                        <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank" class="p-2 duration-300 hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+                        <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank"
+                            class="p-2 duration-300 hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
                             </svg>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=ntcK4_cAAAAJ&hl=en" target="_blank" class="p-2 duration-300 hover:scale-110">
-                            <svg width="22px" height="22px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+                        <a href="https://scholar.google.com/citations?user=ntcK4_cAAAAJ&hl=en" target="_blank"
+                            class="p-2 duration-300 hover:scale-110">
+                            <svg width="22px" height="22px" viewBox="0 0 24 24" role="img"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
                             </svg>
                         </a>
-                        <a href="https://www.researchgate.net/profile/Sean-Farrell-9/" target="_blank" class="p-2 duration-300 hover:scale-110">
+                        <a href="https://www.researchgate.net/profile/Sean-Farrell-9/" target="_blank"
+                            class="p-2 duration-300 hover:scale-110">
                             <svg width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor" d="m19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0 -.112.437 8.365 8.365 0 0 0 -.078.53 9 9 0 0 0 -.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876s-.738.35-1.227.35c-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1 -.147-.762 17.366 17.367 0 0 1 -.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0 -.466-.742 3 3 0 0 0 -.679-.607 3.313 3.313 0 0 0 -.903-.41 4.068 4.068 0 0 0 -1.142-.148zm-11.369 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" />
+                                <path fill="currentColor"
+                                    d="m19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0 -.112.437 8.365 8.365 0 0 0 -.078.53 9 9 0 0 0 -.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876s-.738.35-1.227.35c-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1 -.147-.762 17.366 17.367 0 0 1 -.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0 -.466-.742 3 3 0 0 0 -.679-.607 3.313 3.313 0 0 0 -.903-.41 4.068 4.068 0 0 0 -1.142-.148zm-11.369 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" />
                             </svg>
                         </a>
-                        <a href="https://www.orcid.org/0000-0002-1358-4979" target="_blank" class="p-2 pb-1 duration-300 hover:scale-110">
+                        <a href="https://www.orcid.org/0000-0002-1358-4979" target="_blank"
+                            class="p-2 pb-1 duration-300 hover:scale-110">
                             <svg width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 16c0 8.837-7.163 16-16 16-8.838 0-16-7.163-16-16C0 7.162 7.162 0 16 0c8.837 0 16 7.162 16 16Z" fill="currentColor"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.813 9.637h-5.45v13.9h5.474c4.555 0 7.35-3.378 7.35-6.95 0-1.635-.562-3.372-1.77-4.704-1.215-1.336-3.065-2.246-5.605-2.246ZM18.6 21.3h-2.813v-9.425H18.5c1.823 0 3.12.552 3.96 1.4.842.849 1.252 2.021 1.252 3.312 0 .784-.239 1.967-.993 2.948-.745.969-2.01 1.765-4.119 1.765Zm5.311-4.026c-.251 1.74-1.494 4.276-5.311 4.276h-3.063H18.6c3.817 0 5.06-2.536 5.311-4.276Zm1.812-2.405c-.657-2.601-2.85-4.982-6.91-4.982h-5.2 5.2c4.06 0 6.253 2.38 6.91 4.982Zm.215 1.718ZM8.363 9.675v13.887h2.425V9.675H8.363Zm2.175 13.637H8.612h1.925ZM9.575 8.65c.84 0 1.513-.689 1.513-1.513 0-.823-.673-1.512-1.513-1.512-.838 0-1.512.674-1.512 1.513 0 .823.672 1.512 1.512 1.512Z" fill="#fff"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M32 16c0 8.837-7.163 16-16 16-8.838 0-16-7.163-16-16C0 7.162 7.162 0 16 0c8.837 0 16 7.162 16 16Z"
+                                    fill="currentColor" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.813 9.637h-5.45v13.9h5.474c4.555 0 7.35-3.378 7.35-6.95 0-1.635-.562-3.372-1.77-4.704-1.215-1.336-3.065-2.246-5.605-2.246ZM18.6 21.3h-2.813v-9.425H18.5c1.823 0 3.12.552 3.96 1.4.842.849 1.252 2.021 1.252 3.312 0 .784-.239 1.967-.993 2.948-.745.969-2.01 1.765-4.119 1.765Zm5.311-4.026c-.251 1.74-1.494 4.276-5.311 4.276h-3.063H18.6c3.817 0 5.06-2.536 5.311-4.276Zm1.812-2.405c-.657-2.601-2.85-4.982-6.91-4.982h-5.2 5.2c4.06 0 6.253 2.38 6.91 4.982Zm.215 1.718ZM8.363 9.675v13.887h2.425V9.675H8.363Zm2.175 13.637H8.612h1.925ZM9.575 8.65c.84 0 1.513-.689 1.513-1.513 0-.823-.673-1.512-1.513-1.512-.838 0-1.512.674-1.512 1.513 0 .823.672 1.512 1.512 1.512Z"
+                                    fill="#fff" />
                             </svg>
                         </a>
                     </div>
                     <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 py-5">
-                        <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary font-bold" 
+                        <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary font-bold"
                             target="_blank">Download CV</a>
                         <button class="btn" onclick="location.href='#research-skills'">Learn More</button>
                     </div>
                 </div>
+                <section id="research-skills"></section>
             </div>
         </div>
     </div>
-    <section id="research-skills"></section>
     <br>
     <div class="container mx-auto pb-10">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center mx-10">
-            <div class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
+            <div
+                class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Natural Language Processing</h2>
                     <p>Experienced in frameworks of Huggingface Transformers, scikit-learn, and PyTorch. Successfully
@@ -143,7 +199,8 @@
                         entity recognition (NER), and generative models.</p>
                 </div>
             </div>
-            <div class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
+            <div
+                class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Data Analysis and Statistical Modelling</h2>
                     <p>Proficient in Python, R, SQL . Experienced in scalable pipeline design for low-resource
@@ -151,7 +208,8 @@
                         statistical modeling.</p>
                 </div>
             </div>
-            <div class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
+            <div
+                class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Data Visualisation</h2>
                     <p>Adept at creating clear, informative, and publication-quality visualisations using Matplotlib,
@@ -159,7 +217,8 @@
                         visualisations in an interactive manner.</p>
                 </div>
             </div>
-            <div class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
+            <div
+                class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Teaching and Mentoring</h2>
                     <p>Experienced in teaching NLP to master's-level students, adapting methods for varied skill levels.
@@ -167,7 +226,8 @@
                         in Higher Education to refine my teaching practice.</p>
                 </div>
             </div>
-            <div class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
+            <div
+                class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Communication and Presentations</h2>
                     <p>Experienced in delivering technical presentations to limited prior knowledge audiences. Capable
@@ -175,41 +235,39 @@
                         Won best talk awards.</p>
                 </div>
             </div>
-            <div class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
+            <div
+                class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Ethical and Scientific Writing</h2>
                     <p>Published in peer-reviewed journals, skilled at structuring clear and concise papers, emphasising
                         reproducibility and scientific rigor. Experience in writing ethics proposals.</p>
                 </div>
             </div>
+            <section id="education"></section>
         </div>
         <div class="grid grid-cols-1 justify-center items-center">
             <!-- Education Card -->
-            <section id="education"></section>
             <div
-                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-                <div class="card-body w-100 shadow-2xl border border-grey rounded">
+                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+                <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                     <h2 class="card-title text-3xl font-bold p-5">Education</h2>
                     <h3 class="text-2xl font-semibold px-5">PhD Computer Science (Natural Language Processing)</h3>
+                    <h4 class="text-1xl font-semibold px-5">October 2021 - Present</h4>
                     <h4 class="text-1xl font-semibold px-5">Durham University</h4>
                     <p class="px-5">Biotechnology and Biological Sciences Research Council (BBSRC) funding to
-                        explore
-                        Natural
-                        Language Processing and deep learning methods to analyse over 10 million first opinion
-                        veterinary
-                        electronic
-                        health records (EHRs) from across the UK to understand critical public health matters. Key
-                        achievements include:
+                        explore Natural Language Processing and deep learning methods to analyse over 10 million first
+                        opinion
+                        veterinary electronic health records (EHRs) from across the UK to understand critical public
+                        health matters.
+                        Key achievements include:
                     </p>
-                    <ul style="padding-left: 2%;">
+                    <div class="px-10">
                         <li><b>PetBERT Development</b>: Designed a novel domain-specific transformer language model.
                         </li>
-                        <li><b>Public Health Research</b>: Conducted studies on critical issues such as disease
-                            outbreak
-                            detection, socioeconomic disparities in premature mortality, and patterns of
-                            antimicrobial
-                            usage
-                            in alignment with stewardship guidelines.</li>
+                        <li><b>Public Health Research</b>: Conducted studies on critical public health issues such as
+                            disease
+                            outbreak detection, socioeconomic disparities in premature mortality, and patterns of
+                            antimicrobial usage in alignment with stewardship guidelines.</li>
                         <li><b>Open Benchmark Dataset</b>: Established the first benchmark dataset for veterinary
                             free-text
                             EHRs, setting a new standard for research in this field.</li>
@@ -225,11 +283,11 @@
                             ethical
                             data
                             use and collaboration.</li>
-                    </ul>
+                    </div>
                     <p class="p-5">
                         <b>Impact:</b> My research bridges computational innovation and public health applications,
-                        advocates for
-                        open science principles and setting new standards for veterinary data and model sharing
+                        advocates for open science principles and setting new standards for veterinary data and model
+                        sharing
                         <br>
                         <b>Thesis:</b> Natural Language Processing for Early Detection and Mitigation of Critical
                         Public
@@ -239,6 +297,7 @@
                     <div class="divider"></div>
                     <!--undergrad-->
                     <h3 class="text-2xl font-bold px-5">2:1 BSc(hons) Biomedical Sciences</h3>
+                    <h4 class="text-1xl font-semibold px-5">October 2018 - July 2021</h4>
                     <p class="text-1xl font-semibold px-5">University of Kent</p>
                     <p class="px-5">Proficient in applying interdisciplinary knowledge across biology and healthcare
                         to
@@ -249,15 +308,15 @@
                     <p class="p-5"><b>Thesis:</b> Antimicrobial usage in hospitalised SARS-CoV-2 patients and the
                         impact
                         on the Gut Microbiome
+                    <section id="publications"></section>
                     </p>
                 </div>
             </div>
             <!--Publications Card-->
-            <section id="publications"></section>
             <div
-                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-                <div class="overflow-x-auto w-full shadow-2xl border border-grey rounded bg-base-100">
-                    <div class="card-body w-100">
+                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+                <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100">
+                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                         <h2 class="card-title text-3xl font-bold p-5">Publications</h2>
                         <h3 class="text-2xl font-semibold  p-5">First Authorships</h3>
                         <div class="overflow-x-auto">
@@ -275,7 +334,7 @@
                                 </thead>
                                 <tbody>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Premature mortality analysis of 52,000 deceased cats and dogs exposes
                                             socioeconomic
                                             disparities.</td>
@@ -288,7 +347,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Explainable text-tabular models for predicting mortality risk in
                                             companion
                                             animals.</td>
@@ -301,7 +360,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>PetBERT:
                                             automated ICD-11 syndromic disease coding for outbreak detection in
                                             first
@@ -316,7 +375,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>A multinational survey of companion animal veterinary
                                             clinicians: How can antimicrobial stewardship guidelines be optimised
                                             for the
@@ -337,7 +396,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Seasonality and other risk factors for fleas infestations in domestic
                                             dogs and
                                             cats.</td>
@@ -352,7 +411,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Seasonality and risk factors for myxomatosis in pet rabbits in Great
                                             Britain.
                                         </td>
@@ -386,7 +445,7 @@
                                 </thead>
                                 <tbody>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Text mining for disease surveillance in veterinary clinical data: part
                                             two,
                                             training computers to identify features in
@@ -402,7 +461,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Text mining for disease surveillance in veterinary clinical data: part
                                             two,
                                             training computers to identify features in
@@ -418,7 +477,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Evaluating ChatGPT text mining of clinical records for companion animal
                                             obesity
                                             monitoring.</td>
@@ -432,7 +491,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>SARS-CoV-2 neutralising antibodies in dogs and cats in the United
                                             Kingdom.</td>
                                         <td>Smith, S.L., Anderson, E.R., Cansado-Utrilla, C., Prince, T.,
@@ -470,7 +529,7 @@
                                 </thead>
                                 <tbody>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>PetEVAL: A veterinary free text electronic health records benchmark for
                                             the
                                             anonymisation and
@@ -483,7 +542,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Automated Disease Classification of Veterinary Clinical Narratives for
                                             Antimicrobial Stewardship Guideline Monitoring.</td>
                                         <td><b>Farrell, S.</b>, Singleton, D.A., Radford, A.D., Pinchbeck G., Noble,
@@ -497,7 +556,7 @@
                                                 class="btn btn-primary">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr>
+                                    <tr class="hover">
                                         <td>Comprehensive representation of health-related phenotypes in one million
                                             dogs
                                             using topic
@@ -514,16 +573,16 @@
                             </table>
                             <p class="p-5 text-right font-semibold">*Equal Contribution</p>
                         </div>
+                        <section id="presentations"></section>
                     </div>
                 </div>
             </div>
         </div>
         <!--Presentations Card-->
-        <section id="presentations"></section>
         <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="overflow-x-auto w-full shadow-2xl border border-grey rounded bg-base-100">
-                <div class="card-body w-100">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100">
+                <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                     <h2 class="card-title text-3xl font-bold p-5">Conferences and Presentations</h2>
                     <div class="overflow-x-auto">
                         <table class="table">
@@ -540,7 +599,7 @@
                             </thead>
                             <tbody>
                                 <!-- row 1 -->
-                                <tr>
+                                <tr class="hover">
                                     <td>Syndromic Disease Surveillance and Multi-label Classifiers for Antimicrobial
                                         Usage Assessment</td>
                                     <td>Association for Veterinary Informatics Talbot Veterinary Informatics
@@ -652,74 +711,67 @@
                             </tbody>
                         </table>
                     </div>
+                    <section id="employment"></section>
                 </div>
             </div>
         </div>
         <!-- Employment Card -->
-        <section id="employment"></section>
         <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded">
-                <h2 class="card-title text-3xl font-bold p-5">Employment</h2>
-                <h3 class="text-2xl font-semibold px-5">Data Science Intern @ <a href="https://www.evergreen-life.co.uk"
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl bg-base-100">
+                <h2 class="card-title text-3xl font-bold">Employment</h2>
+                <h3 class="text-2xl font-semibold">Data Science Intern @ <a href="https://www.evergreen-life.co.uk"
                         class="text-primary">Evergreen Life</a></h3>
-                <h4 class="text-1xl font-semibold px-5">June 2024 - September2024</h4>
-                <ul class="px-5">
-                    <li>Developed a Retrieval Augmented Generation pipeline utilising generative language model (LLM) to
-                        deliver personalised healthcare advice, ensuring information safety and accuracy by aligning
-                        outputs</li>
-                    with the Evergreen Life article repository.</li>
-                    <li> Designed an algorithm-driven content recommendation system, tailoring advice to individual user
-                        needs.</li>
-                </ul>
-                <p class="px-5"><b>Impact: </b>My work is being integrated into an app serving over 1 million NHS
+                <h4 class="text-1xl font-semibold">June 2024 - September2024</h4>
+                <li>Developed a Retrieval Augmented Generation pipeline utilising generative language model (LLM) to
+                    deliver personalised healthcare advice, ensuring information safety and accuracy by aligning
+                    outputs with the Evergreen Life article repository.</li>
+                <li> Designed an algorithm-driven content recommendation system, tailoring advice to individual user
+                    needs.</li>
+                <p><b>Impact: </b>My work is being integrated into an app serving over 1 million NHS
                     patients,
                     enhancing its capability to provide personalised, reliable healthcare guidance.</p>
                 <div class="divider"></div>
                 <!--demonstrator-->
-                <h3 class="text-2xl font-bold px-5">Natural Language Processing Demonstrator @ <a
+                <h3 class="text-2xl font-bold">Natural Language Processing Demonstrator @ <a
                         href="https://durham.ac.uk/" class="text-primary">Durham University</a></h3>
-                <h4 class="text-1xl font-semibold px-5">January 2022 - Present</h4>
-                <p class="px-5">Delivered comprehensive NLP curriculum from foundational machine learning to advanced
+                <h4 class="text-1xl font-semibold">January 2022 - Present</h4>
+                <li>Delivered comprehensive NLP curriculum from foundational machine learning to advanced
                     Deep Learning and Transformers, adapting technical content for diverse audiences ranging from MSc
-                    Computer Science to MBA Business Analytics students</p>
+                    Computer Science to MBA Business Analytics students</li>
                 <div class="divider"></div>
                 <!--Undergraduate Researcher 2-->
-                <h3 class="text-2xl font-bold px-5">Undergraduate Researcher @ <a href="https://liv.ac.uk/"
+                <h3 class="text-2xl font-bold">Undergraduate Researcher @ <a href="https://liv.ac.uk/"
                         class="text-primary">University of Liverpool</a></h3>
-                <h5 class="text-1xl font-semibold px-5">July 2020 – September 2021</h5>
-                <ul class="px-5">
-                    <li>Conducted research on geospatial and risk factors for fleas as a second-year undergraduate</li>
-                    <li>Utilised electronic health records (EHRs) from over 34,000 animals across UK first-opinion
-                        veterinary practices.</li>
-                </ul>
-                <p class="px-5"><b>Impact: </b>Published findings in the Journal of Medical and Veterinary Entomology
+                <h5 class="text-1xl font-semibold">July 2020 – September 2021</h5>
+                <li>Conducted research on geospatial and risk factors for fleas as a second-year undergraduate</li>
+                <li>Utilised electronic health records (EHRs) from over 34,000 animals across UK first-opinion
+                    veterinary practices.</li>
+                <p><b>Impact: </b>Published findings in the Journal of Medical and Veterinary Entomology
                 </p>
                 <div class="divider"></div>
                 <!--Undergraduate Researcher 1-->
-                <h3 class="text-2xl font-bold px-5">Undergraduate Researcher @ <a href="https://liv.ac.uk/"
+                <h3 class="text-2xl font-bold">Undergraduate Researcher @ <a href="https://liv.ac.uk/"
                         class="text-primary">University of Liverpool</a></h3>
-                <h5 class="text-1xl font-semibold px-5">June 2019 – January 2020</h5>
-                <ul class="px-5">
-                    <li>Conducted research on geospatial and risk factors for Myxomatosis as a first-year undergraduate
-                    </li>
-                    <li>First exposure to large-scale data analytics, applying statistical methodologies such as
-                        multivariate logistic modelling for risk factor analysis</li>
-                    <li>Secured funding to produce and distribute educational posters summarising research findings to
-                        veterinary practices across the UK.</li>
-                </ul>
-                <p class="px-5"><b>Impact: </b>Published findings in the Journal of Preventive Veterinary Medicine</p>
+                <h5 class="text-1xl font-semibold">June 2019 – January 2020</h5>
+                <li>Conducted research on geospatial and risk factors for Myxomatosis as a first-year undergraduate
+                </li>
+                <li>First exposure to large-scale data analytics, applying statistical methodologies such as
+                    multivariate logistic modelling for risk factor analysis</li>
+                <li>Secured funding to produce and distribute educational posters summarising research findings to
+                    veterinary practices across the UK.</li>
+                <p><b>Impact: </b>Published findings in the Journal of Preventive Veterinary Medicine</p>
                 <div class="divider"></div>
                 <!--Sainsbury-->
-                <h3 class="text-2xl font-bold px-5">Customer Experience Supervisor @ Sainsbury's</h3>
-                <h5 class="text-1xl font-semibold px-5">October 2016 – September 2021</h5>
+                <h3 class="text-2xl font-bold">Customer Experience Supervisor @ Sainsbury's</h3>
+                <h5 class="text-1xl font-semibold">October 2016 – September 2021</h5>
             </div>
         </div>
         <!-- Rewards Card -->
         <!-- <section id="rewards"></section>
         <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                 <h2 class="card-title text-3xl font-bold p-5">Awards and Findings</h2>
                     <li>Creating a webpage hosting the Archive of Protocols for Veterinary Microbiology Investigations – EU COST Action Virtual Mobility grant (8/4/2024) - €1500</li>
                     <li>Drafting and Launching of the Equine Antimicrobial Treatment Survey – EU COST Action Virtual Mobility grant (01/09/2022) - €1500</li>
@@ -728,35 +780,33 @@
             </div>
         </div> -->
         <!-- Teaching Card -->
-        <section id="teaching"></section>
         <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-6 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                 <h2 class="card-title text-3xl font-bold p-5">Teaching</h2>
                 <h3 class="text-2xl font-semibold px-5">Natural Language Processing Demonstrator</h3>
                 <h4 class="text-1xl font-semibold px-5">January 2021 – Present</h4>
-                <ul class="px-5">
-                    <li>Leading workshops from statistical methods for natural language processing to large language model training</li>
-                    <li>Designed workshop materials including guides and code</li>
-                    <li>Taught to the taught-Masters Computer Science Programme</li>     
-                </ul>
+                <li>Leading workshops from statistical methods for natural language processing to large language
+                    model training</li>
+                <li>Designed workshop materials including guides and code</li>
+                <li>Taught to the taught-Masters Computer Science Programme</li>
                 <div class="divider"></div>
                 <!--demonstrator-->
                 <h3 class="text-2xl font-semibold px-5">Natural Language Analysis Demonstrator</h3>
                 <h4 class="text-1xl font-semibold px-5">January 2021 – Present</h4>
-                <ul class="px-5">
-                    <li>Leading workshops from statistical methods for natural language processing to large language model training</li>
-                    <li>Taught to the Master of Business Administration (MBA) programme</li>
-                    <li>Limited prior knowledge in python, therefore classes are much more focussed on understanding the code and attaining results before grasping with technical knowledge around deep learning methodologies </li>
-                             
-                </ul>
+                <li>Leading workshops from statistical methods for natural language processing to large language
+                    model training</li>
+                <li>Taught to the Master of Business Administration (MBA) programme</li>
+                <li>Limited prior knowledge in python, therefore classes are much more focussed on understanding the
+                    code and attaining results before grasping with technical knowledge around deep learning
+                    methodologies </li>
             </div>
         </div>
         <!-- Contact Card -->
         <section id="contact"></section>
         <div
             class="card-body flex flex-col justify-center items-center m-0 p-2 pt-10 pb-6 sm:justify-self-end lg:justify-self-auto w-full duration-300 hover:scale-105">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                 <h2 class="card-title text-3xl font-bold p-5 justify-center items-center">Contact Me</h2>
                 <h2 class="text-xl px-5">Feel free to reach out for collaborations, job opportunities, or just a
                     chat—I’d be happy to connect!</h2>
@@ -770,7 +820,8 @@
         </div>
 
         <!-- Toast Notification -->
-        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full hidden shadow-2xl">Email copied!</div>
+        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full hidden shadow-2xl">Email
+            copied!</div>
 
         <script>
             document.getElementById('copy-email').addEventListener('click', function () {
@@ -796,25 +847,38 @@
         <nav>
             <div class="grid grid-flow-col gap-2">
                 <div class="flex space-x-4 pb-[20%]">
-                    <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank" class="p-2 duration-300 hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+                    <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank"
+                        class="p-2 duration-300 hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
                         </svg>
                     </a>
-                    <a href="https://scholar.google.com/citations?user=ntcK4_cAAAAJ&hl=en" target="_blank" class="p-2 duration-300 hover:scale-110">
-                        <svg width="22px" height="22px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+                    <a href="https://scholar.google.com/citations?user=ntcK4_cAAAAJ&hl=en" target="_blank"
+                        class="p-2 duration-300 hover:scale-110">
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" role="img"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
                         </svg>
                     </a>
-                    <a href="https://www.researchgate.net/profile/Sean-Farrell-9/" target="_blank" class="p-2 duration-300 hover:scale-110">
+                    <a href="https://www.researchgate.net/profile/Sean-Farrell-9/" target="_blank"
+                        class="p-2 duration-300 hover:scale-110">
                         <svg width="22px" height="22px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor" d="m19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0 -.112.437 8.365 8.365 0 0 0 -.078.53 9 9 0 0 0 -.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876s-.738.35-1.227.35c-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1 -.147-.762 17.366 17.367 0 0 1 -.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0 -.466-.742 3 3 0 0 0 -.679-.607 3.313 3.313 0 0 0 -.903-.41 4.068 4.068 0 0 0 -1.142-.148zm-11.369 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" />
+                            <path fill="currentColor"
+                                d="m19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0 -.112.437 8.365 8.365 0 0 0 -.078.53 9 9 0 0 0 -.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876s-.738.35-1.227.35c-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1 -.147-.762 17.366 17.367 0 0 1 -.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0 -.466-.742 3 3 0 0 0 -.679-.607 3.313 3.313 0 0 0 -.903-.41 4.068 4.068 0 0 0 -1.142-.148zm-11.369 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" />
                         </svg>
                     </a>
-                    <a href="https://www.orcid.org/0000-0002-1358-4979" target="_blank" class="p-2 pb-1 duration-300 hover:scale-110">
+                    <a href="https://www.orcid.org/0000-0002-1358-4979" target="_blank"
+                        class="p-2 pb-1 duration-300 hover:scale-110">
                         <svg width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M32 16c0 8.837-7.163 16-16 16-8.838 0-16-7.163-16-16C0 7.162 7.162 0 16 0c8.837 0 16 7.162 16 16Z" fill="currentColor"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.813 9.637h-5.45v13.9h5.474c4.555 0 7.35-3.378 7.35-6.95 0-1.635-.562-3.372-1.77-4.704-1.215-1.336-3.065-2.246-5.605-2.246ZM18.6 21.3h-2.813v-9.425H18.5c1.823 0 3.12.552 3.96 1.4.842.849 1.252 2.021 1.252 3.312 0 .784-.239 1.967-.993 2.948-.745.969-2.01 1.765-4.119 1.765Zm5.311-4.026c-.251 1.74-1.494 4.276-5.311 4.276h-3.063H18.6c3.817 0 5.06-2.536 5.311-4.276Zm1.812-2.405c-.657-2.601-2.85-4.982-6.91-4.982h-5.2 5.2c4.06 0 6.253 2.38 6.91 4.982Zm.215 1.718ZM8.363 9.675v13.887h2.425V9.675H8.363Zm2.175 13.637H8.612h1.925ZM9.575 8.65c.84 0 1.513-.689 1.513-1.513 0-.823-.673-1.512-1.513-1.512-.838 0-1.512.674-1.512 1.513 0 .823.672 1.512 1.512 1.512Z" fill="#fff"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M32 16c0 8.837-7.163 16-16 16-8.838 0-16-7.163-16-16C0 7.162 7.162 0 16 0c8.837 0 16 7.162 16 16Z"
+                                fill="currentColor" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.813 9.637h-5.45v13.9h5.474c4.555 0 7.35-3.378 7.35-6.95 0-1.635-.562-3.372-1.77-4.704-1.215-1.336-3.065-2.246-5.605-2.246ZM18.6 21.3h-2.813v-9.425H18.5c1.823 0 3.12.552 3.96 1.4.842.849 1.252 2.021 1.252 3.312 0 .784-.239 1.967-.993 2.948-.745.969-2.01 1.765-4.119 1.765Zm5.311-4.026c-.251 1.74-1.494 4.276-5.311 4.276h-3.063H18.6c3.817 0 5.06-2.536 5.311-4.276Zm1.812-2.405c-.657-2.601-2.85-4.982-6.91-4.982h-5.2 5.2c4.06 0 6.253 2.38 6.91 4.982Zm.215 1.718ZM8.363 9.675v13.887h2.425V9.675H8.363Zm2.175 13.637H8.612h1.925ZM9.575 8.65c.84 0 1.513-.689 1.513-1.513 0-.823-.673-1.512-1.513-1.512-.838 0-1.512.674-1.512 1.513 0 .823.672 1.512 1.512 1.512Z"
+                                fill="#fff" />
                         </svg>
                     </a>
                 </div>
