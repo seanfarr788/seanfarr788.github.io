@@ -75,27 +75,53 @@
 
 <style>
     header {
-        background-color: white;
-        transition: background-color 0.3s ease, padding 0.3s ease;
+        backdrop-filter: blur(10px);
+        transition: padding 0.3s ease;
         padding: 0.6%;
     }
 
     header.scrolled {
-        background-color: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
         padding: 0.25%;
+    }
+
+    .header-background {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+
+    header.scrolled .header-background {
+        opacity: 0.5;
     }
 
     .header-content {
         opacity: 1;
     }
-    .menu a.active {
-        font-weight: bold;
+
+    .active {
+        opacity: 0.8;
+    }
+    .table th:nth-child(1), .table td:nth-child(1) {
+        width: 30%; /* Set width for the first column */
+    }
+
+    .table th:nth-child(2), .table td:nth-child(2) {
+        width: 20%; /* Set width for the second column */
+    }
+
+    .table th:nth-child(3), .table td:nth-child(3) {
+        width: 10%; /* Set width for the third column */
+    }
+    .table th:nth-child(4), .table td:nth-child(4),
+    .table th:nth-child(5), .table td:nth-child(5),
+    .table th:nth-child(6), .table td:nth-child(6) {
+        width: 3%; /* Set width for the remaining columns */
     }
 </style>
 
-<header class="fixed top-0 w-full z-50 bg-base-100 shadow-md">
-    <div class="navbar flex-wrap">
+
+<header class="fixed top-0 w-full z-50 shadow-md">
+    <div class="header-background absolute inset-0 w-full h-full bg-base-100"></div>
+    <div class="navbar flex-wrap relative">
         <div class="flex-1 flex justify-between items-center">
             <a class="btn btn-ghost text-xl font-bold" href="#home">Sean Farrell</a>
             <button id="menu-toggle" class="block md:hidden focus:outline-none">
@@ -219,7 +245,7 @@
                         .wave {
                             display: inline-block;
                             transform-origin: 70% 70%;
-                            animation: wave 2s;
+                            animation: wave 3s;
                         }
 
                         .wave:hover {
