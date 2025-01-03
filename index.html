@@ -48,10 +48,7 @@
             header.classList.remove('scrolled');
         }
     });
-</script>
-
-<script>
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const sections = document.querySelectorAll('section');
         const menuItems = document.querySelectorAll('header .menu a');
 
@@ -85,12 +82,14 @@
     }
 
     .header-background {
-    opacity: 0.5;
-    transition: opacity 0.5s ease, box-shadow 1.5s ease; /* Add transition for box-shadow */
+        opacity: 0.5;
+        transition: opacity 0.5s ease, box-shadow 1.5s ease;
+        /* Add transition for box-shadow */
     }
 
     header.scrolled .header-background {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add bottom shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add bottom shadow */
     }
 
     .header-content {
@@ -100,21 +99,33 @@
     .active {
         opacity: 0.8;
     }
-    .table th:nth-child(1), .table td:nth-child(1) {
-        width:25%; /* Set width for the first column */
+
+    .table th:nth-child(1),
+    .table td:nth-child(1) {
+        width: 25%;
+        /* Set width for the first column */
     }
 
-    .table th:nth-child(2), .table td:nth-child(2) {
-        width: 20%; /* Set width for the second column */
+    .table th:nth-child(2),
+    .table td:nth-child(2) {
+        width: 20%;
+        /* Set width for the second column */
     }
 
-    .table th:nth-child(3), .table td:nth-child(3) {
-        width: 15%; /* Set width for the third column */
+    .table th:nth-child(3),
+    .table td:nth-child(3) {
+        width: 15%;
+        /* Set width for the third column */
     }
-    .table th:nth-child(4), .table td:nth-child(4),
-    .table th:nth-child(5), .table td:nth-child(5),
-    .table th:nth-child(6), .table td:nth-child(6) {
-        width: 3%; /* Set width for the remaining columns */
+
+    .table th:nth-child(4),
+    .table td:nth-child(4),
+    .table th:nth-child(5),
+    .table td:nth-child(5),
+    .table th:nth-child(6),
+    .table td:nth-child(6) {
+        width: 3%;
+        /* Set width for the remaining columns */
     }
 </style>
 
@@ -169,6 +180,7 @@
         menu.classList.toggle('hidden');
     });
 </script>
+<section id="home"></section>
 
 <body class="pt-20">
     <!-- <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button> -->
@@ -202,7 +214,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Second Card -->
             <div class="card card-body flex flex-col justify-center">
                 <div class="w-full max-w-lg py-5">
@@ -302,7 +313,6 @@
             </div>
         </div>
     </div>
-    <section id="home"></section>
     <section id="research-skills"></section>
     <br>
     <div class="container mx-auto pb-10">
@@ -311,7 +321,9 @@
                 class="card card-side bg-base-100 shadow-xl m-5 h-70%  duration-300 hover:scale-105 border border-grey">
                 <div class="card-body">
                     <h2 class="card-title">Natural Language Processing</h2>
-                    <p>Expert in transformer models, Retrieval Augmented Generation (RAG) systems, topic modelling, explainability, and multi-modal architectures using PyTorch and Huggingface. Specialised in low-resource training and domain adaptation.</p>
+                    <p>Expert in transformer models, Retrieval Augmented Generation (RAG) systems, topic modelling,
+                        explainability, and multi-modal architectures using PyTorch and Huggingface. Specialised in
+                        low-resource training and domain adaptation.</p>
                 </div>
             </div>
             <div
@@ -839,8 +851,8 @@
         </div>
         <!-- Employment Card -->
         <div
-        class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-        <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                 <h2 class="card-title text-3xl font-bold">Employment</h2>
                 <h3 class="text-2xl font-semibold">Data Science Intern @ <a href="https://www.evergreen-life.co.uk"
                         class="text-primary">Evergreen Life</a></h3>
@@ -905,8 +917,8 @@
         </div> -->
         <!-- Teaching Card -->
         <div
-        class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-        <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                 <h2 class="card-title text-3xl font-bold p-5">Teaching</h2>
                 <h3 class="text-2xl font-semibold px-5">Natural Language Processing Demonstrator</h3>
                 <h4 class="text-1xl font-semibold px-5">January 2021 – Present</h4>
@@ -942,22 +954,31 @@
             </div>
         </div>
 
-        <!-- Toast Notification -->
-        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full hidden shadow-2xl">Email
-            copied!</div>
+        <style>
+            #toast {
+                opacity: 0;
+                transition: opacity 0.5s ease-out;
+            }
+        
+            #toast.show {
+                opacity: 1;
+            }
+        </style>
 
-        <script>
-            document.getElementById('copy-email').addEventListener('click', function () {
-                const email = 'sean.farrell2@durham.ac.uk';
-                navigator.clipboard.writeText(email).then(function () {
-                    const toast = document.getElementById('toast');
-                    toast.classList.remove('hidden');
-                    setTimeout(function () {
-                        toast.classList.add('hidden');
-                    }, 3000);
+        <!-- Toast Notification -->
+        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full shadow-2xl">Email copied!</div>
+            <script>
+                document.getElementById('copy-email').addEventListener('click', function () {
+                    const email = 'sean.farrell2@durham.ac.uk';
+                    navigator.clipboard.writeText(email).then(function () {
+                        const toast = document.getElementById('toast');
+                        toast.classList.add('show');
+                        setTimeout(function () {
+                            toast.classList.remove('show');
+                        }, 3000);
+                    });
                 });
-            });
-        </script>
+            </script>
     </div>
 
     <footer class="footer footer-center pt-10 w-full">
