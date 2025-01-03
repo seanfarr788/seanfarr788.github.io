@@ -39,6 +39,60 @@
     </script>
 </head>
 
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const menuItems = document.querySelectorAll('header .menu a');
+
+        let currentSection = 'home'; // Default state
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').includes(currentSection)) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<style>
+    header {
+        background-color: white;
+        transition: background-color 0.3s ease, padding 0.3s ease;
+        padding: 0.6%;
+    }
+
+    header.scrolled {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 0.25%;
+    }
+
+    .header-content {
+        opacity: 1;
+    }
+    .menu a.active {
+        font-weight: bold;
+    }
+</style>
 
 <header class="fixed top-0 w-full z-50 bg-base-100 shadow-md">
     <div class="navbar flex-wrap">
@@ -54,12 +108,13 @@
         </div>
         <div id="menu" class="hidden md:flex md:items-center w-full md:w-auto">
             <ul class="menu menu-horizontal flex flex-col md:flex-row justify-center md:justify-end w-full md:w-auto">
-                <li><a href="#">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#research-skills">Research Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#presentations">Presentations</a></li>
                 <li><a href="#employment">Employment</a></li>
+                <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact Me</a></li>
                 <li>
                     <div class="flex-none w-full md:w-auto flex justify-center md:justify-end">
@@ -89,9 +144,7 @@
     });
 </script>
 
-
 <body class="pt-20">
-
     <!-- <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button> -->
     <div class="container mx-auto pb-15">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center">
@@ -217,13 +270,14 @@
                     <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 py-5">
                         <a href="assets/Sean_Farrell_academic_cv.pdf" download class="btn btn-primary font-bold"
                             target="_blank">Download CV</a>
-                        <button class="btn" onclick="location.href='#research-skills'">Learn More</button>
+                        <button class="btn" onclick="location.href='#contact'">Contact me</button>
                     </div>
                 </div>
-                <section id="research-skills"></section>
             </div>
         </div>
     </div>
+    <section id="home"></section>
+    <section id="research-skills"></section>
     <br>
     <div class="container mx-auto pb-10">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center mx-10">
@@ -280,8 +334,8 @@
                     <p>Published in peer-reviewed journals, skilled at structuring clear and concise papers, emphasising
                         reproducibility and scientific rigor. Experience in writing ethics proposals.</p>
                 </div>
-                <section id="education"></section>
             </div>
+            <section id="education"></section>
         </div>
         <div class="grid grid-cols-1 justify-center items-center">
             <!-- Education Card -->
@@ -795,6 +849,7 @@
                 <p><b>Impact: </b>Published findings in the Journal of Medical and Veterinary Entomology
                 </p>
                 <div class="divider"></div>
+                <section id="teaching"></section>
                 <!--Undergraduate Researcher 1-->
                 <h3 class="text-2xl font-bold">Undergraduate Researcher @ <a href="https://liv.ac.uk/"
                         class="text-primary">University of Liverpool</a></h3>
@@ -812,6 +867,7 @@
                 <h5 class="text-1xl font-semibold">October 2016 – September 2021</h5>
             </div>
         </div>
+        <section id="contact"></section>
         <!-- Rewards Card -->
         <!-- <section id="rewards"></section>
         <div
@@ -848,7 +904,6 @@
             </div>
         </div>
         <!-- Contact Card -->
-        <section id="contact"></section>
         <div
             class="card-body flex flex-col justify-center items-center m-0 p-2 pt-10 pb-6 sm:justify-self-end lg:justify-self-auto w-full duration-300 hover:scale-105">
             <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
