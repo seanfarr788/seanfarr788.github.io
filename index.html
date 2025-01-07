@@ -68,6 +68,10 @@
             }
         });
     });
+
+    document.getElementById('scrollToTop').addEventListener('click', function() {
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 </script>
 
 <style>
@@ -134,7 +138,7 @@
     <div class="header-background absolute inset-0 w-full h-full bg-base-100"></div>
     <div class="navbar flex-wrap relative">
         <div class="flex-1 flex justify-between items-center">
-            <a class="btn btn-ghost text-xl font-bold" href="#home">Sean Farrell</a>
+            <a class="btn btn-ghost text-xl font-bold" href="#scrollToTop">Sean Farrell</a>
             <button id="menu-toggle" class="block md:hidden focus:outline-none">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +185,6 @@
     });
 </script>
 <section id="home"></section>
-
 <body class="pt-20">
     <!-- <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button> -->
     <div class="container mx-auto pb-15">
@@ -203,7 +206,7 @@
                                 </div>
                                 <div class="stat place-items-center">
                                     <div class="stat-title">Citations</div>
-                                    <div class="stat-value text-primary"><a href="#publications">60</a></div>
+                                    <div class="stat-value text-primary"><a href="#publications">63</a></div>
                                 </div>
                                 <div class="stat place-items-center">
                                     <div class="stat-title">H-index</div>
@@ -375,8 +378,8 @@
         <div class="grid grid-cols-1 justify-center items-center">
             <!-- Education Card -->
             <div
-                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-                <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                     <h2 class="card-title text-3xl font-bold p-5">Education</h2>
                     <h3 class="text-2xl font-semibold px-5">PhD Computer Science (Natural Language Processing)</h3>
                     <h4 class="text-1xl font-semibold px-5">October 2021 - Present</h4>
@@ -441,11 +444,11 @@
             </div>
             <!--Publications Card-->
             <div
-                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
                 <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100">
-                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
+                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl p-20">
                         <h2 class="card-title text-3xl font-bold p-5">Publications</h2>
-                        <h3 class="text-2xl font-semibold  p-5">First Authorships</h3>
+                        <h3 class="text-2xl font-semibold  pb-5">First Authorships</h3>
                         <div class="overflow-x-auto">
                             <table class="table">
                                 <!-- head -->
@@ -716,8 +719,8 @@
         <div
             class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
             <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100">
-                <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
-                    <h2 class="card-title text-3xl font-bold p-5">Conferences and Presentations</h2>
+                <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl p-20">
+                    <h2 class="card-title text-3xl font-bold pb-5">Conferences and Presentations</h2>
                     <div class="overflow-x-auto">
                         <table class="table">
                             <!-- head -->
@@ -833,15 +836,6 @@
                                     <td>Oral</td>
                                     <td><a href="" download class="btn btn-disabled">Download</a></td>
                                 </tr>
-                                <!-- row 3 -->
-                                <tr class="hover">
-                                    <td>Introduction to Natural Language Processing</td>
-                                    <td>NGSchool Machine Learning in Computational Biology</td>
-                                    <td>Warsaw, Poland</td>
-                                    <td>1/06/2024</td>
-                                    <td>Oral</td>
-                                    <td><a href="" download class="btn btn-disabled">Download</a></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -850,10 +844,11 @@
             </div>
         </div>
         <!-- Employment Card -->
+
         <div
             class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
-                <h2 class="card-title text-3xl font-bold">Employment</h2>
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl p-20">
+                <h2 class="card-title text-3xl font-bold pb-5">Employment</h2>
                 <h3 class="text-2xl font-semibold">Data Science Intern @ <a href="https://www.evergreen-life.co.uk"
                         class="text-primary">Evergreen Life</a></h3>
                 <h4 class="text-1xl font-semibold">June 2024 - September2024</h4>
@@ -884,7 +879,6 @@
                 <p><b>Impact: </b>Published findings in the Journal of Medical and Veterinary Entomology
                 </p>
                 <div class="divider"></div>
-                <section id="teaching"></section>
                 <!--Undergraduate Researcher 1-->
                 <h3 class="text-2xl font-bold">Undergraduate Researcher @ <a href="https://liv.ac.uk/"
                         class="text-primary">University of Liverpool</a></h3>
@@ -900,9 +894,9 @@
                 <!--Sainsbury-->
                 <h3 class="text-2xl font-bold">Customer Experience Supervisor @ Sainsbury's</h3>
                 <h5 class="text-1xl font-semibold">October 2016 – September 2021</h5>
+                <section id="teaching"></section>
             </div>
         </div>
-        <section id="contact"></section>
         <!-- Rewards Card -->
         <!-- <section id="rewards"></section>
         <div
@@ -918,29 +912,44 @@
         <!-- Teaching Card -->
         <div
             class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
-                <h2 class="card-title text-3xl font-bold p-5">Teaching</h2>
-                <h3 class="text-2xl font-semibold px-5">Natural Language Processing Demonstrator</h3>
-                <h4 class="text-1xl font-semibold px-5">January 2021 – Present</h4>
+            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl p-20">
+                <h2 class="card-title text-3xl font-bold pb-5">Teaching</h2>
+                <h3 class="text-2xl font-semibold">Natural Language Processing Demonstrator</h3>
+                <h4 class="text-1xl font-semibold">January 2021 – Present</h4>
                 <li>Leading workshops from statistical methods for natural language processing to large language
                     model training</li>
                 <li>Designed workshop materials including guides and code</li>
                 <li>Taught to the taught-Masters Computer Science Programme</li>
                 <div class="divider"></div>
                 <!--demonstrator-->
-                <h3 class="text-2xl font-semibold px-5">Natural Language Analysis Demonstrator</h3>
-                <h4 class="text-1xl font-semibold px-5">January 2021 – Present</h4>
+                <h3 class="text-2xl font-semibold">Natural Language Analysis Demonstrator</h3>
+                <h4 class="text-1xl font-semibold">January 2021 – Present</h4>
                 <li>Leading workshops from statistical methods for natural language processing to large language
                     model training</li>
                 <li>Taught to the Master of Business Administration (MBA) programme</li>
                 <li>Limited prior knowledge in python, therefore classes are much more focussed on understanding the
                     code and attaining results before grasping with technical knowledge around deep learning
                     methodologies </li>
+                <div class="divider"></div>
+                <section id="contact"></section>
+                <h3 class="text-2xl font-semibold">Computational Thinking Demonstrator</h3>
+                <h4 class="text-1xl font-semibold">December 2024 - January 2025</h4>
+                <li>Supported in the marking of undergraduate coursework around essay pieces</li>
+                <li>Supported in the development of marking rubrics</li>
+                <div class="divider"></div>
+                <!--demonstrator-->
+                <h3 class="text-2xl font-semibold">Introduction to Natural Language Processing</h3>
+                <h4 class="text-1xl font-semibold">June 2021</h4>
+                <li>Invited to deliver a lecture on the basics of natural language processing to a group of
+                    bioscience students at the the NGSchool Machine Learning in Computational Biology</li> 
+                <li>Designed a workshop to introduce the students to the basics of NLP and how it can be applied to
+                    biological data</li>
+                <li>Limited prior knowledge in python and machine learning practices</li>
             </div>
         </div>
         <!-- Contact Card -->
         <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pt-10 pb-6 sm:justify-self-end lg:justify-self-auto w-full duration-300 hover:scale-105">
+            class="card-body flex flex-col justify-center items-center m-0 p-2 pt-10 pb-20 sm:justify-self-end lg:justify-self-auto w-full duration-300 hover:scale-105">
             <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                 <h2 class="card-title text-3xl font-bold p-5 justify-center items-center">Contact Me</h2>
                 <h2 class="text-xl px-5">Feel free to reach out for collaborations, job opportunities, or just a
