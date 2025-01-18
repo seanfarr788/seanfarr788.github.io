@@ -2,6 +2,17 @@
 <html lang="en" data-theme="winter" style="scroll-behavior: smooth;">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5WC3GHLS');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -69,9 +80,9 @@
         });
     });
 
-    document.getElementById('scrollToTop').addEventListener('click', function() {
-    document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+    document.getElementById('scrollToTop').addEventListener('click', function () {
+        document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 </script>
 
 <style>
@@ -185,7 +196,14 @@
     });
 </script>
 <section id="home"></section>
+
 <body class="pt-20">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WC3GHLS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button> -->
     <div class="container mx-auto pb-15">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center">
@@ -378,8 +396,8 @@
         <div class="grid grid-cols-1 justify-center items-center">
             <!-- Education Card -->
             <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-            <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
+                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+                <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl">
                     <h2 class="card-title text-3xl font-bold p-5">Education</h2>
                     <h3 class="text-2xl font-semibold px-5">PhD Computer Science (Natural Language Processing)</h3>
                     <h4 class="text-1xl font-semibold px-5">October 2021 - Present</h4>
@@ -444,7 +462,7 @@
             </div>
             <!--Publications Card-->
             <div
-            class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
+                class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
                 <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100">
                     <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl px-7 pt-10 md:p-20">
                         <h2 class="card-title text-3xl font-bold">Publications</h2>
@@ -890,6 +908,31 @@
                 <li>Secured funding to produce and distribute educational posters summarising research findings to
                     veterinary practices across the UK.</li>
                 <p><b>Impact: </b>Published findings in the Journal of Preventive Veterinary Medicine</p>
+                <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
+                    <a href="https://blogs.kent.ac.uk/biosciences/2020/03/11/undergraduate-publishes-their-first-research-paper/"
+                        class="w-full">
+                        <div
+                            class="card card-side bg-base-100 shadow-xl h-full border border-grey duration-300 hover:scale-105 flex">
+                            <figure class="flex-grow">
+                                <img src="https://blogs.kent.ac.uk/biosciences/files/2020/03/UG-student-Sean-Farrell.jpg"
+                                    class="w-full h-1/2 object-cover" />
+                            </figure>
+                            <div
+                                class="card-body p-2 px-3 flex items-center justify-center bg-gradient-to-r from-white via-transparent to-transparent">
+                                <h2 class="card-title">Undergraduate publishes their first research paper</h2>
+                            </div>
+                        </div>
+                    </a> -->
+                    <!-- <a href="https://doi.org/10.1016/j.prevetmed.2020.104924" class="w-full">
+                      <div class="card card-side bg-base-100 shadow-xl h-1/2 border border-grey duration-300 hover:scale-105 flex">
+                        <figure class="flex-grow">
+                            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0167587720300507-gr3.jpg" class="w-full h-1/2 object-cover" />
+                        </figure>
+                        <div class="card-body p-2 px-3 flex items-center justify-center bg-gradient-to-r from-white via-transparent to-transparent">
+                          <h2 class="card-title">Seasonality and risk factors for myxomatosis in pet rabbits in Great Britain</h2>
+                        </div>
+                      </div>
+                    </a> -->
                 <div class="divider"></div>
                 <!--Sainsbury-->
                 <h3 class="text-2xl font-bold">Customer Experience Supervisor @ Sainsbury's</h3>
@@ -941,7 +984,7 @@
                 <h3 class="text-2xl font-semibold">Introduction to Natural Language Processing</h3>
                 <h4 class="text-1xl font-semibold">June 2021</h4>
                 <li>Invited to deliver a lecture on the basics of natural language processing to a group of
-                    bioscience students at the the NGSchool Machine Learning in Computational Biology</li> 
+                    bioscience students at the the NGSchool Machine Learning in Computational Biology</li>
                 <li>Designed a workshop to introduce the students to the basics of NLP and how it can be applied to
                     biological data</li>
                 <li>Limited prior knowledge in python and machine learning practices</li>
@@ -968,26 +1011,27 @@
                 opacity: 0;
                 transition: opacity 0.5s ease-out;
             }
-        
+
             #toast.show {
                 opacity: 1;
             }
         </style>
 
         <!-- Toast Notification -->
-        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full shadow-2xl">Email copied!</div>
-            <script>
-                document.getElementById('copy-email').addEventListener('click', function () {
-                    const email = 'sean.farrell2@durham.ac.uk';
-                    navigator.clipboard.writeText(email).then(function () {
-                        const toast = document.getElementById('toast');
-                        toast.classList.add('show');
-                        setTimeout(function () {
-                            toast.classList.remove('show');
-                        }, 3000);
-                    });
+        <div id="toast" class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full shadow-2xl">Email copied!
+        </div>
+        <script>
+            document.getElementById('copy-email').addEventListener('click', function () {
+                const email = 'sean.farrell2@durham.ac.uk';
+                navigator.clipboard.writeText(email).then(function () {
+                    const toast = document.getElementById('toast');
+                    toast.classList.add('show');
+                    setTimeout(function () {
+                        toast.classList.remove('show');
+                    }, 3000);
                 });
-            </script>
+            });
+        </script>
     </div>
 
     <footer class="footer footer-center pt-10 w-full">
