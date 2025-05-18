@@ -86,6 +86,7 @@
 </script>
 
 <style>
+
     header {
         backdrop-filter: blur(10px);
         transition: padding 0.3s ease;
@@ -198,6 +199,71 @@
 <section id="home"></section>
 
 <body class="pt-20">
+    <!--SAVY POPUP-->
+    <div id="popup-modal"
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm z-50 hidden animate-fade-in">
+        <div
+            class="relative w-full max-w-3xl bg-white rounded-3xl border border-white/40 shadow-2xl p-10 text-center transition-all duration-300 transform scale-100 hover:scale-[1.015] backdrop-blur-md ring-1 ring-white/20">
+
+            <!-- Close Button -->
+            <button id="close-popup"
+                class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 transition duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 hover:rotate-90 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Greeting -->
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight drop-shadow">
+                Hi! <span class="wave">👋</span>
+            </h1>
+            <h2 class="text-lg text-gray-700 font-medium mb-6 italic">Thanks for joining my SAVY talk!</h2>
+
+            <!-- PetEVAL -->
+            <div class="mb-10">
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">🐾 PetEVAL</h3>
+                <p class="font-medium text-gray-700 mb-4">A free text Veterinary Electronic Health Record Dataset</p>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <a href="#"
+                        class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-full shadow-lg hover:scale-105 transform transition-all duration-200">🚀
+                        Benchmark</a>
+                    <a href="assets/papers/sean_farrell_peteval.pdf" download
+                        class="border-2 border-blue-600 text-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-50 transition-all duration-200">📄
+                        Download Paper</a>
+                </div>
+            </div>
+
+            <hr class="my-8 border-gray-300">
+
+            <!-- PetHarbor -->
+            <div class="mb-10">
+                <h3 class="text-3xl font-bold text-gray-900 mb-1">🤝 PetHarbor</h3>
+                <h4 class="text-xl font-semibold text-gray-500 mb-2">coming soon</h4>
+                <p class="text-gray-700 font-medium">Feel free to contact me if you wish to have a say!</p>
+            </div>
+
+            <hr class="my-8 border-gray-300">
+
+            <!-- Contact -->
+            <h3 class="text-3xl font-bold text-gray-900 mb-5">✨ Let’s Stay in Touch!</h3>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:sean.farrell2@durham.ac.uk"
+                    class="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-full shadow-md hover:scale-105 transition duration-200">📧
+                    Email Me</a>
+                <a href="https://www.linkedin.com/in/seanoliverfarrell"
+                    class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 rounded-full shadow-md hover:scale-105 transition duration-200">🔗
+                    LinkedIn</a>
+                <button id="copy-email"
+                    class="border border-gray-500 text-gray-700 px-6 py-2.5 rounded-full hover:bg-gray-100 hover:scale-105 transition duration-200">📋
+                    Copy Email</button>
+            </div>
+            <p id="copy-feedback" class="text-sm text-green-600 mt-3 hidden">✅ Email copied to clipboard!</p>
+        </div>
+    </div>
+
+
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WC3GHLS" height="0" width="0"
@@ -413,20 +479,20 @@
                         Key achievements include:
                     </p>
                     <div class="px-10">
-                        <li><b>PetBERT Development</b>: Designed a novel domain-specific transformer language model.
+                        <li><b>PetBERT</b>: Designed a novel domain-specific Large Language Model (LLM).
                         </li>
                         <li><b>Public Health Research</b>: Conducted studies on critical public health issues such as
-                            disease
-                            outbreak detection, socioeconomic disparities in premature mortality, and patterns of
+                            disease outbreak detection, socioeconomic disparities in premature mortality, and patterns
+                            of
                             antimicrobial usage in alignment with stewardship guidelines.</li>
-                        <li><b>Open Benchmark Dataset</b>: Established the first benchmark dataset for veterinary
-                            free-text
-                            EHRs, setting a new standard for research in this field.</li>
+                        <li><b>PetEVAL Open Benchmark</b>: Established the first benchmark dataset for veterinary
+                            free-text Electronic health Records (EHRs), setting a new standard for research in this
+                            field.</li>
                         <li><b>Multimodal and Explainable AI</b>: Integrated free text and structured data with
                             explainability tools to provide actionable insights into model decision-making
                             processes.
                         </li>
-                        <li><b>Multinational Collaboration</b>: Coordinated a multinational study within the EU
+                        <li><b>Multi-national Collaboration</b>: Coordinated a multinational study within the EU
                             ENOVAT
                             project, identifying barriers for antimicrobial stewardship guideline adoption.</li>
                         <li><b>International Protocol Leadership</b>: Leading the creation of global protocols for
@@ -484,6 +550,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr class="hover">
+                                        <td>PetEVAL: A veterinary free text electronic health records benchmark.</td>
+                                        <td><b>Farrell, S.</b>, Radford, A.D., Al Moubayed, N., Noble, P.-J.M. </td>
+                                        <td>BioNLP @ ACL 2025</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td><a href="" download class="btn btn-disabled">Download</a></td>
+                                    </tr>
                                     <!-- row -->
                                     <tr class="hover">
                                         <td>Premature mortality analysis of 52,000 deceased cats and dogs exposes
@@ -689,7 +763,8 @@
                                 </thead>
                                 <tbody>
                                     <tr class="hover">
-                                        <td>PetHarbor: A Standardised Framework for Sharing Veterinary Electronic Health Records.</td>
+                                        <td>PetHarbor: A Standardised Framework for Sharing Veterinary Electronic Health
+                                            Records.</td>
                                         <td><b>Farrell, S.</b>, Radford, A.D., Al Moubayed, N., Noble, P.-J.M. </td>
                                         <td>In Review</td>
                                         <td>-</td>
@@ -697,14 +772,6 @@
                                         <td><a href="" download class="btn btn-disabled">Download</a></td>
                                     </tr>
                                     <!-- row -->
-                                    <tr class="hover">
-                                        <td>PetEVAL: A veterinary free text electronic health records benchmark.</td>
-                                        <td><b>Farrell, S.</b>, Radford, A.D., Al Moubayed, N., Noble, P.-J.M. </td>
-                                        <td>In Review</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td><a href="" download class="btn btn-disabled">Download</a></td>
-                                    </tr>
                                     <!-- row -->
                                     <tr class="hover">
                                         <td>Automated Disease Classification of Veterinary Clinical Narratives for
@@ -742,8 +809,10 @@
                                         <td><a href="" download class="btn btn-disabled">Download</a></td>
                                     </tr>
                                     <tr class="hover">
-                                        <td>Quantifying and contextualising antimicrobial usage using automated disease classification tools</td>
-                                        <td>Lawson, A.,<b>Farrell, S.</b>a, Noble, P-J.,; Mair, T., Smith, J., Pinchbeck, G., </td>
+                                        <td>Quantifying and contextualising antimicrobial usage using automated disease
+                                            classification tools</td>
+                                        <td>Lawson, A.,<b>Farrell, S.</b>a, Noble, P-J.,; Mair, T., Smith, J.,
+                                            Pinchbeck, G., </td>
                                         <td>In Review</td>
                                         <td>-</td>
                                         <td>-</td>
@@ -934,19 +1003,23 @@
                     veterinary practices across the UK.</li>
                 <p><b>Impact: </b>Published findings in the Journal of Preventive Veterinary Medicine</p>
                 <a href="https://blogs.kent.ac.uk/biosciences/2020/03/11/undergraduate-publishes-their-first-research-paper/"
-                class="w-full max-w-md">
-                <div class="card card-side bg-base-100 shadow-md border border-grey duration-200 hover:scale-105 flex-row">
-                    <figure class="w-1/3 h-15 overflow-hidden relative">
-                        <img src="https://blogs.kent.ac.uk/biosciences/files/2020/03/UG-student-Sean-Farrell.jpg"
-                            class="w-full absolute object-cover" style="height: 100%;" />
-                    </figure>
-                    <div class="card-body p-5">
-                        <h1 class="card-title text-sm font-bold">Undergraduate publishes their first research paper</h1>
-                        <h6 class="card-title text-sm" style="font-size: smaller; color: lightgrey; align-self: flex-start;">11th March 2020</h6>
-                        <h7></h7>
+                    class="w-full max-w-md">
+                    <div
+                        class="card card-side bg-base-100 shadow-md border border-grey duration-200 hover:scale-105 flex-row">
+                        <figure class="w-1/3 h-15 overflow-hidden relative">
+                            <img src="https://blogs.kent.ac.uk/biosciences/files/2020/03/UG-student-Sean-Farrell.jpg"
+                                class="w-full absolute object-cover" style="height: 100%;" />
+                        </figure>
+                        <div class="card-body p-5">
+                            <h1 class="card-title text-sm font-bold">Undergraduate publishes their first research paper
+                            </h1>
+                            <h6 class="card-title text-sm"
+                                style="font-size: smaller; color: lightgrey; align-self: flex-start;">11th March 2020
+                            </h6>
+                            <h7></h7>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
                 <!-- <a href="https://doi.org/10.1016/j.prevetmed.2020.104924" class="w-full">
                       <div class="card card-side bg-base-100 shadow-xl h-1/2 border border-grey duration-300 hover:scale-105 flex">
                         <figure class="flex-grow">
@@ -1059,6 +1132,19 @@
                         toast.classList.remove('show');
                     }, 3000);
                 });
+            });
+        </script>
+        <script>
+            // Show the popup when the page loads
+            window.addEventListener('load', function () {
+                const popup = document.getElementById('popup-modal');
+                popup.classList.remove('hidden');
+            });
+
+            // Close the popup when the close button is clicked
+            document.getElementById('close-popup').addEventListener('click', function () {
+                const popup = document.getElementById('popup-modal');
+                popup.classList.add('hidden');
             });
         </script>
     </div>
