@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="winter" style="scroll-behavior: smooth;">
+
 <head>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -85,7 +86,6 @@
 </script>
 
 <style>
-
     header {
         backdrop-filter: blur(10px);
         transition: padding 0.3s ease;
@@ -202,6 +202,38 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WC3GHLS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+<dialog id="welcome_modal" class="modal">
+  <div class="modal-box max-w-2xl bg-white p-6 rounded-2xl shadow-2xl">
+    <!-- Welcome Section -->
+    <div class="w-full bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-6 space-y-6">
+      <h2 class="text-3xl font-extrabold text-center text-slate-800">Thank you for visiting my poster! 👋</h2>
+      <p class="text-lg text-center text-slate-600">I’d love to connect—whether it’s about collaborations, job opportunities, or just a chat.</p>
+      
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <a href="assets/papers/sean_farrell_fleas.pdf" download class="btn btn-primary px-5">📄 View Paper</a>
+        <a href="assets/datasets/fleas_dataset.zip" download class="btn btn-secondary px-5">📦 Download Dataset</a>
+        <a href="assets/papers/sean_farrell_fleas.pdf" download class="btn btn-outline px-5">📝 Supplementary</a>
+      </div>
+
+      <div class="border-t border-slate-200 pt-6 space-y-4">
+        <h3 class="text-2xl font-semibold text-center text-slate-800">Contact Me</h3>
+        <p class="text-lg text-center text-slate-600">Feel free to reach out anytime. I’d be happy to connect!</p>
+        <div class="flex flex-wrap justify-center items-center gap-4">
+          <a href="mailto:sean.farrell2@durham.ac.uk" class="btn btn-primary px-5">✉️ Email Me</a>
+          <a href="https://www.linkedin.com/in/seanoliverfarrell" target="_blank" class="btn btn-primary px-5">🔗 LinkedIn</a>
+          <button id="copy-email" class="btn btn-outline px-5">📋 Copy Email</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Close Button -->
+    <div class="modal-action mt-6 justify-center">
+      <form method="dialog">
+        <button class="btn btn-neutral px-6">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
     <!-- <button id="toggleButton" class="btn fixed bottom-5 right-5">Toggle View</button> -->
     <div class="container mx-auto pb-15">
@@ -223,7 +255,7 @@
                                 </div>
                                 <div class="stat place-items-center">
                                     <div class="stat-title">Citations</div>
-                                    <div class="stat-value text-primary"><a href="#publications">81</a></div>
+                                    <div class="stat-value text-primary"><a href="#publications">88</a></div>
                                 </div>
                                 <div class="stat place-items-center">
                                     <div class="stat-title">H-index</div>
@@ -781,7 +813,9 @@
                             </thead>
                             <tbody>
                                 <tr class="hover">
-                                    <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk Award</span> Democratising Veterinary EHRs: Balancing Privacy & Open Science for the future of LLM Research in Veterinary Science </td>
+                                    <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk Award</span>
+                                        Democratising Veterinary EHRs: Balancing Privacy & Open Science for the future
+                                        of LLM Research in Veterinary Science </td>
                                     <td>Symposium on Artificial Intelligence in Veterinary Medicine </td>
                                     <td>Cornell University, USA</td>
                                     <td>16/05/2025</td>
@@ -790,7 +824,8 @@
                                 </tr>
                                 <!-- row 1 -->
                                 <tr class="hover">
-                                    <td>Unravelling HPCIA prescription trends in veterinary healthcare: LLM approach towards antimicrobial stewardship surveillance in the UK </td>
+                                    <td>Unravelling HPCIA prescription trends in veterinary healthcare: LLM approach
+                                        towards antimicrobial stewardship surveillance in the UK </td>
                                     <td>Association for Veterinary Informatics Talbot Veterinary Informatics Symposium
                                     </td>
                                     <td>Virginia-Tech University, USA</td>
@@ -821,7 +856,8 @@
                                 </tr>
                                 <!-- row 3 -->
                                 <tr class="hover">
-                                    <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk Award</span> Disease Outbreak Detection Using Large Language Models</td>
+                                    <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk Award</span>
+                                        Disease Outbreak Detection Using Large Language Models</td>
                                     <td>Annual BBSRC NLD DTP Conference</td>
                                     <td>Durham University, UK</td>
                                     <td>1/06/2024</td>
@@ -854,7 +890,8 @@
                                 </tr>
                                 <!-- row 3 -->
                                 <tr class="hover">
-                                    <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk Award</span> Predictive Power of Large Language Models in Determining Mortality Risks in
+                                    <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk Award</span>
+                                        Predictive Power of Large Language Models in Determining Mortality Risks in
                                         Companion Animals</td>
                                     <td>Annual BBSRC NLD DTP Conference</td>
                                     <td>Durham University, UK</td>
@@ -1071,6 +1108,15 @@
                         toast.classList.remove('show');
                     }, 3000);
                 });
+            });
+        </script>
+        <!-- Popup -->
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const modal = document.getElementById('welcome_modal');
+                if (modal) {
+                    modal.showModal();
+                }
             });
         </script>
     </div>
