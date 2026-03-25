@@ -1,115 +1,137 @@
-.menu i {
-    width: 18px;
-    height: 18px;
-    stroke-width: 1.8;
+/* 1. Global Fluid Foundation */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
 }
 
+[data-theme='dark'] {
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* Fluid typography: Min 16px, scales with viewport */
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+
+/* 2. Enhanced Dynamic Header */
 header {
-    /* Frosted glass core */
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-
-    background: rgba(255, 255, 255, 0.12); /* milky light layer */
-    /* Shape + spacing */
-    padding: 0.6%;
-    transition:
-        padding 0.3s ease,
-        background 0.5s ease,
-        border-color 0.5s ease,
-        box-shadow 0.6s ease;
-
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header.scrolled {
-    padding: 0.05%;
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 6px 35px rgba(0, 0, 0, 0.20);
+    padding-block: 0.25rem;
+    background: var(--glass-bg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.header-background {
-    opacity: 0.5;
-    transition: opacity 0.5s ease, box-shadow 1.5s ease;
+/* Active Nav Indicator - Modern Dot Style */
+.menu a.active {
+    background: transparent !important;
+    color: oklch(var(--p)) !important;
+    position: relative;
 }
 
-
-header.scrolled .header-background {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: oklch(var(--p));
+    border-radius: 50%;
 }
 
-.active {
-    opacity: 0.8;
-    font-weight: bold;
-    /* Added bold to make active state clearer */
-    color: oklch(var(--p));
-    /* Use primary color for active state */
+/* 3. Research Card Interactions (Publications) */
+article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.table th:nth-child(1),
-.table td:nth-child(1) {
-    width: 25%;
+article:hover {
+    transform: translateY(-4px);
+    border-color: oklch(var(--p) / 0.4);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-.table th:nth-child(2),
-.table td:nth-child(2) {
-    width: 20%;
+/* 4. Fluid Experience Timeline */
+#employment .relative::before {
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: oklch(var(--p));
+    box-shadow: 0 0 0 4px oklch(var(--p) / 0.2);
+    transition: all 0.3s ease;
 }
 
-.table th:nth-child(3),
-.table td:nth-child(3) {
-    width: 15%;
+#employment .relative:hover::before {
+    background: oklch(var(--s));
+    transform: scale(1.3);
 }
 
-/* Fix for the wave animation */
-@keyframes wave {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    10% {
-        transform: rotate(14deg);
-    }
-
-    20% {
-        transform: rotate(-8deg);
-    }
-
-    30% {
-        transform: rotate(14deg);
-    }
-
-    40% {
-        transform: rotate(-4deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    60% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+/* 5. Dynamic Background Blobs */
+@keyframes blob-bounce {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
 }
 
+.animate-blob {
+    animation: blob-bounce 7s infinite alternate ease-in-out;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* 6. Refined Wave Animation */
 .wave {
     display: inline-block;
     transform-origin: 70% 70%;
-    animation: wave 5s;
+    animation: wave-animation 2.5s infinite;
 }
 
-.wave:hover {
-    animation: wave 2s infinite;
+@keyframes wave-animation {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
 }
 
+/* 7. Toast & Feedback */
 #toast {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
 }
 
-#toast.show {
-    opacity: 1;
+#toast.opacity-0 {
+    transform: translateY(100px);
+}
+
+/* Mobile Menu Transition */
+#mobile-dropdown {
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* 8. Modern Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+    }
 }
