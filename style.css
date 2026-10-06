@@ -1,3 +1,118 @@
+/* ---------------------------------------------------------------- */
+/* Theme — refined "classy & minimal" palette (overrides DaisyUI's  */
+/* default "winter" / "dark" tokens so every semantic utility class  */
+/* (btn-primary, text-primary, badge-warning, bg-base-200, ...) picks */
+/* up the new palette automatically without touching component markup */
+/* ---------------------------------------------------------------- */
+
+[data-theme="winter"] {
+    color-scheme: light;
+
+    /* ink navy — primary accent */
+    --p: 30% 0.055 258;
+    --pc: 98% 0.004 90;
+
+    /* brass / gold — secondary accent */
+    --s: 64% 0.1 78;
+    --sc: 24% 0.03 78;
+
+    /* deep terracotta — tertiary accent */
+    --a: 42% 0.12 27;
+    --ac: 97% 0.01 90;
+
+    /* neutral (footer, btn-neutral) */
+    --n: 24% 0.018 258;
+    --nc: 92% 0.006 90;
+
+    /* warm ivory surfaces */
+    --b1: 98.5% 0.004 90;
+    --b2: 96.3% 0.006 85;
+    --b3: 92.5% 0.009 85;
+    --bc: 26% 0.015 258;
+
+    /* award / highlight gold (badge-warning) */
+    --wa: 78% 0.12 85;
+    --wac: 26% 0.05 85;
+
+    --rounded-box: 0.85rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1.9rem;
+}
+
+:root:has(input.theme-controller[value="dark"]:checked) {
+    color-scheme: dark;
+
+    --p: 74% 0.1 80;
+    --pc: 20% 0.03 80;
+
+    --s: 68% 0.08 258;
+    --sc: 20% 0.02 258;
+
+    --a: 66% 0.13 30;
+    --ac: 20% 0.03 30;
+
+    --n: 85% 0.01 90;
+    --nc: 20% 0.02 258;
+
+    --b1: 19% 0.016 258;
+    --b2: 23% 0.016 258;
+    --b3: 27% 0.016 258;
+    --bc: 92% 0.008 90;
+
+    --wa: 78% 0.12 85;
+    --wac: 22% 0.04 85;
+
+    --rounded-box: 0.85rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1.9rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* Typography                                                        */
+/* ---------------------------------------------------------------- */
+
+body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    background-color: oklch(var(--b1));
+}
+
+h1, h2, h3,
+.font-display {
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+#header-logo span {
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
+    font-weight: 600;
+}
+
+/* Section kicker / overline label */
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: oklch(var(--p));
+    margin-bottom: 0.35rem;
+}
+
+.kicker::before {
+    content: '';
+    width: 1.75rem;
+    height: 1px;
+    background: oklch(var(--p) / 0.5);
+    display: inline-block;
+}
+
+/* ---------------------------------------------------------------- */
+/* Header                                                             */
+/* ---------------------------------------------------------------- */
+
 .menu i {
     width: 18px;
     height: 18px;
@@ -5,26 +120,23 @@
 }
 
 header {
-    /* Frosted glass core */
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-
-    background: rgba(255, 255, 255, 0.12); /* milky light layer */
-    /* Shape + spacing */
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    background: oklch(var(--b1) / 0.6);
     padding: 0.6%;
     transition:
         padding 0.3s ease,
         background 0.5s ease,
         border-color 0.5s ease,
         box-shadow 0.6s ease;
-
+    border-bottom: 1px solid transparent;
 }
 
 header.scrolled {
     padding: 0.05%;
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 6px 35px rgba(0, 0, 0, 0.20);
+    background: oklch(var(--b1) / 0.88);
+    border-color: oklch(var(--bc) / 0.08);
+    box-shadow: 0 8px 30px oklch(var(--bc) / 0.06);
 }
 
 .header-background {
@@ -32,18 +144,51 @@ header.scrolled {
     transition: opacity 0.5s ease, box-shadow 1.5s ease;
 }
 
-
 header.scrolled .header-background {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px oklch(var(--bc) / 0.1);
 }
 
 .active {
-    opacity: 0.8;
-    font-weight: bold;
-    /* Added bold to make active state clearer */
+    opacity: 1;
+    font-weight: 600;
     color: oklch(var(--p));
-    /* Use primary color for active state */
 }
+
+/* ---------------------------------------------------------------- */
+/* Timeline (Employment / Education / Teaching)                      */
+/* ---------------------------------------------------------------- */
+
+.timeline-item {
+    position: relative;
+    padding-left: 1.75rem;
+    border-left: 1px solid oklch(var(--b3));
+    transition: border-color 0.3s ease;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0.4rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 9999px;
+    background: oklch(var(--p));
+    box-shadow: 0 0 0 4px oklch(var(--b1));
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-left-color: oklch(var(--p) / 0.4);
+}
+
+.timeline-item:hover::before {
+    background: oklch(var(--s));
+}
+
+/* ---------------------------------------------------------------- */
+/* Tables (Publications / Presentations)                             */
+/* ---------------------------------------------------------------- */
 
 .table th:nth-child(1),
 .table td:nth-child(1) {
@@ -58,6 +203,19 @@ header.scrolled .header-background {
 .table th:nth-child(3),
 .table td:nth-child(3) {
     width: 15%;
+}
+
+.table th {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: oklch(var(--bc) / 0.55);
+    background: transparent;
+}
+
+.table tr.hover:hover {
+    background: oklch(var(--p) / 0.05);
 }
 
 /* Fix for the wave animation */

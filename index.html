@@ -25,6 +25,9 @@
     <meta property="og:url" content="https://www.seanfarr788.github.io">
     <meta property="og:type" content="website">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -224,24 +227,24 @@
                 <div class="flex justify-center md:justify-end items-center" data-aos="fade-right">
                     <div class="card card-body flex flex-col justify-center items-center m-0 p-2">
                         <div class="w-full max-w-sm">
-                            <img class="duration-300 hover:scale-105 relative z-15" src="assets/images/profile.png" />
                             <div class="relative">
-                                <div
-                                    class="bg-gradient-to-r from-primary to-secondary rounded-t-full overflow-hidden w-full h-5/6 absolute bottom-full -z-10">
+                                <div class="absolute inset-x-6 -inset-y-4 bg-primary/15 rounded-full blur-3xl -z-10"></div>
+                                <div class="absolute -right-2 bottom-20 w-20 h-20 bg-secondary/25 rounded-full blur-2xl -z-10"></div>
+                                <img class="duration-300 hover:scale-105 relative rounded-[2rem] ring-1 ring-base-300 shadow-xl"
+                                    src="assets/images/profile.png" />
+                            </div>
+                            <div class="stats shadow-sm border border-base-300 text-sm w-full relative mt-5">
+                                <div class="stat place-items-center">
+                                    <div class="stat-title">Publication</div>
+                                    <div class="stat-value"><a href="#publications">12</a></div>
                                 </div>
-                                <div class="stats shadow-2xl text-sm w-full relative z-15">
-                                    <div class="stat place-items-center">
-                                        <div class="stat-title">Publication</div>
-                                        <div class="stat-value"><a href="#publications">12</a></div>
-                                    </div>
-                                    <div class="stat place-items-center">
-                                        <div class="stat-title">Citations</div>
-                                        <div class="stat-value text-primary"><a href="#publications">201</a></div>
-                                    </div>
-                                    <div class="stat place-items-center">
-                                        <div class="stat-title">H-index</div>
-                                        <div class="stat-value"><a href="#publications">8</a></div>
-                                    </div>
+                                <div class="stat place-items-center">
+                                    <div class="stat-title">Citations</div>
+                                    <div class="stat-value text-primary"><a href="#publications">201</a></div>
+                                </div>
+                                <div class="stat place-items-center">
+                                    <div class="stat-title">H-index</div>
+                                    <div class="stat-value"><a href="#publications">8</a></div>
                                 </div>
                             </div>
                         </div>
@@ -250,10 +253,11 @@
                 <div class="card card-body flex flex-col justify-center" data-aos="fade-left">
                     <div class="w-full max-w-lg py-5 pt-5-">
                         <div class="text-center lg:text-left max-w-2xl">
-                            <h1 class="text-5xl font-extrabold leading-tight">
+                            <span class="kicker justify-center lg:justify-start">Postdoctoral Researcher · Stanford University</span>
+                            <h1 class="text-5xl font-bold leading-tight">
                                 Hi, I'm Sean <span class="wave inline-block">👋</span>
                             </h1>
-                            <p class="text-lg">
+                            <p class="text-lg mt-3 text-base-content/75">
                                 I'm a Stanford Postdoc leveraging my Deep Learning PhD to build healthcare AI that generalize to real-world patient populations.
                             </p>
                             <div class="flex justify-center lg:justify-start gap-4 mb-4 mt-4">
@@ -310,170 +314,146 @@
             </div>
 
             <section id="research-skills" class="container mx-auto py-10 scroll-mt-28">
+                <div class="mx-10 mb-8" data-aos="fade-up">
+                    <span class="kicker">Expertise</span>
+                    <h2 class="card-title text-3xl font-bold"><i data-lucide="flask-conical" class="size-8"></i>Research
+                        Skills</h2>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-10 pb-10">
-                    <div class="card bg-base-100 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 hover:scale-[1.02] rounded-2xl"
+                    <div class="card bg-base-100 shadow-sm border border-base-300 hover:shadow-lg transition duration-300 hover:-translate-y-0.5 rounded-2xl"
                         data-aos="fade-up" data-aos-delay="0">
                         <div class="card-body">
-                            <h2 class="card-title text-xl font-semibold flex items-center gap-2">
-                                <i data-lucide="brain" class="w-5 h-5 text-blue-600"></i>
+                            <h3 class="card-title text-xl font-semibold flex items-center gap-2">
+                                <i data-lucide="brain" class="w-5 h-5 text-primary"></i>
                                 Natural Language Processing
-                            </h2>
+                            </h3>
                             <p>Expert in transformer models, Retrieval Augmented Generation (RAG) systems,
                                 topic modelling,
                                 explainability, and multi-modal architectures using PyTorch and Huggingface. Specialised
                                 in
                                 low-resource training and domain adaptation.</p>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                <span
-                                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Transformers</span>
-                                <span
-                                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">RAG</span>
-                                <span
-                                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Explainability</span>
-                                <span
-                                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Multi-modal</span>
-                                <span
-                                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">PyTorch</span>
-                                <span
-                                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Huggingface</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Transformers</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">RAG</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Explainability</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Multi-modal</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">PyTorch</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Huggingface</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card bg-base-100 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 hover:scale-[1.02] rounded-2xl"
+                    <div class="card bg-base-100 shadow-sm border border-base-300 hover:shadow-lg transition duration-300 hover:-translate-y-0.5 rounded-2xl"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body">
-                            <h2 class="card-title text-xl font-semibold flex items-center gap-2">
-                                <i data-lucide="bar-chart-3" class="w-5 h-5 text-green-600"></i>
+                            <h3 class="card-title text-xl font-semibold flex items-center gap-2">
+                                <i data-lucide="bar-chart-3" class="w-5 h-5 text-secondary"></i>
                                 Data Analysis and Statistical Modelling
-                            </h2>
+                            </h3>
                             <p>Proficient in Python, R, SQL. Experienced in scalable pipeline design for
                                 low-resource
                                 environments, analysing datasets of 16M+ records, Git-based version control, and
                                 advanced
                                 statistical modeling.</p>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                <span
-                                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Python</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">R</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">SQL</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Data
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Python</span>
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">R</span>
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">SQL</span>
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Data
                                     Pipelines</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Big
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Big
                                     Data</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Git</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Statistical
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Git</span>
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Statistical
                                     Modelling</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card bg-base-100 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 hover:scale-[1.02] rounded-2xl"
+                    <div class="card bg-base-100 shadow-sm border border-base-300 hover:shadow-lg transition duration-300 hover:-translate-y-0.5 rounded-2xl"
                         data-aos="fade-up" data-aos-delay="200">
                         <div class="card-body">
-                            <h2 class="card-title text-xl font-semibold flex items-center gap-2">
-                                <i data-lucide="pie-chart" class="w-5 h-5 text-purple-600"></i>
+                            <h3 class="card-title text-xl font-semibold flex items-center gap-2">
+                                <i data-lucide="pie-chart" class="w-5 h-5 text-accent"></i>
                                 Data Visualisation
-                            </h2>
+                            </h3>
                             <p>Adept at creating clear, informative, and publication-quality
                                 visualisations. Skilled in website creation for serving models and presenting
                                 visualisations interactively.</p>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                <span
-                                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Matplotlib</span>
-                                <span
-                                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Seaborn</span>
-                                <span
-                                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">ggplot2</span>
-                                <span
-                                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Plotly</span>
-                                <span
-                                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Dashboard
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Matplotlib</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Seaborn</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">ggplot2</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Plotly</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Dashboard
                                     Design</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card bg-base-100 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 hover:scale-[1.02] rounded-2xl"
+                    <div class="card bg-base-100 shadow-sm border border-base-300 hover:shadow-lg transition duration-300 hover:-translate-y-0.5 rounded-2xl"
                         data-aos="fade-up" data-aos-delay="300">
                         <div class="card-body">
-                            <h2 class="card-title text-xl font-semibold flex items-center gap-2">
-                                <i data-lucide="graduation-cap" class="w-5 h-5 text-yellow-600"></i>
+                            <h3 class="card-title text-xl font-semibold flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-primary"></i>
                                 Teaching and Mentoring
-                            </h2>
+                            </h3>
                             <p>Experienced in teaching NLP to master's-level students, adapting methods
                                 for varied skill levels.
                                 Mentoring a master’s student on an epidemiology-based project. Awarded with Associate
                                 Fellowship
                                 in Higher Education.</p>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                <span
-                                    class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">AFHEA</span>
-                                <span
-                                    class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Mentoring</span>
-                                <span
-                                    class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">NLP
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AFHEA</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Mentoring</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">NLP
                                     Education</span>
-                                <span
-                                    class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Curriculum
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Curriculum
                                     Design</span>
-                                <span
-                                    class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Student
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Student
                                     Engagement</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card bg-base-100 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 hover:scale-[1.02] rounded-2xl"
+                    <div class="card bg-base-100 shadow-sm border border-base-300 hover:shadow-lg transition duration-300 hover:-translate-y-0.5 rounded-2xl"
                         data-aos="fade-up" data-aos-delay="400">
                         <div class="card-body">
-                            <h2 class="card-title text-xl font-semibold flex items-center gap-2">
-                                <i data-lucide="mic" class="w-5 h-5 text-pink-600"></i>
+                            <h3 class="card-title text-xl font-semibold flex items-center gap-2">
+                                <i data-lucide="mic" class="w-5 h-5 text-secondary"></i>
                                 Communication and Presentations
-                            </h2>
+                            </h3>
                             <p>Experienced in delivering technical presentations to limited prior
                                 knowledge audiences. Capable
                                 of tailoring complex concepts to both expert and lay audiences, ensuring clarity and
                                 engagement. Won multiple best talk awards.</p>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                <span
-                                    class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Public
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Public
                                     Speaking</span>
-                                <span
-                                    class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Science
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Science
                                     Communication</span>
-                                <span
-                                    class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Audience
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">Audience
                                     Engagement</span>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 hover:scale-[1.02] rounded-2xl"
+                    <div class="card bg-base-100 shadow-sm border border-base-300 hover:shadow-lg transition duration-300 hover:-translate-y-0.5 rounded-2xl"
                         data-aos="fade-up" data-aos-delay="500">
                         <div class="card-body">
-                            <h2 class="card-title text-xl font-semibold flex items-center gap-2">
-                                <i data-lucide="file-text" class="w-5 h-5 text-indigo-600"></i>
+                            <h3 class="card-title text-xl font-semibold flex items-center gap-2">
+                                <i data-lucide="file-text" class="w-5 h-5 text-accent"></i>
                                 Ethical and Scientific Writing
-                            </h2>
+                            </h3>
                             <p>Published in peer-reviewed journals, skilled at structuring clear and
                                 concise papers, emphasising
                                 reproducibility and scientific rigor. Experience in writing ethics proposals.</p>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                <span
-                                    class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Scientific
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Scientific
                                     Writing</span>
-                                <span
-                                    class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Ethics
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Ethics
                                     Proposals</span>
-                                <span
-                                    class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Reproducibility</span>
-                                <span
-                                    class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Research
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Reproducibility</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">Research
                                     Integrity</span>
                             </div>
                         </div>
@@ -482,15 +462,16 @@
             </section>
              <section id="employment"
                 class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full scroll-mt-28">
-                <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100" data-aos="fade-up">
-                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl px-7 pt-10 md:p-20">
-                        <h2 class="card-title text-3xl font-bold py-5"><i data-lucide="briefcase"
+                <div class="overflow-x-auto w-full rounded-2xl bg-base-100" data-aos="fade-up">
+                    <div class="card-body w-100 shadow-sm border border-base-300 rounded-2xl px-7 pt-10 md:p-20">
+                        <span class="kicker">Career</span>
+                        <h2 class="card-title text-3xl font-bold pb-5"><i data-lucide="briefcase"
                                 class="size-8"></i>Employment</h2>
 
 
                         <div class="space-y-14">
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Postdoctoral Researcher @
@@ -513,7 +494,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Postdoctoral Researcher @
@@ -537,7 +518,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Data Science Intern @
@@ -561,7 +542,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         NLP Demonstrator @
@@ -585,7 +566,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Undergraduate Researcher @
@@ -629,7 +610,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Undergraduate Researcher @
@@ -697,7 +678,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">Customer Experience Supervisor @
                                         Sainsbury’s</h3>
@@ -713,15 +694,16 @@
             <section id="education" class="grid grid-cols-1 justify-center items-center scroll-mt-28">
                 <div
                     class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full">
-                    <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100" data-aos="fade-up">
-                        <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl px-7 pt-10 md:p-20">
-                            <h2 class="card-title text-3xl font-bold py-5"><i data-lucide="graduation-cap"
+                    <div class="overflow-x-auto w-full rounded-2xl bg-base-100" data-aos="fade-up">
+                        <div class="card-body w-100 shadow-sm border border-base-300 rounded-2xl px-7 pt-10 md:p-20">
+                            <span class="kicker">Academic Background</span>
+                            <h2 class="card-title text-3xl font-bold pb-5"><i data-lucide="graduation-cap"
                                     class="size-8"></i>Education</h2>
 
                             <div class="space-y-14">
 
                                 <div
-                                    class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                    class="relative timeline-item">
                                     <div class="ml-2">
                                         <h3 class="text-2xl font-semibold">
                                             PhD Computer Science (Natural Language Processing)
@@ -776,7 +758,7 @@
                                 </div>
 
                                 <div
-                                    class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                    class="relative timeline-item">
                                     <div class="ml-2">
                                         <h3 class="text-2xl font-semibold">2:1 BSc (Hons) Biomedical Sciences</h3>
                                         <h4 class="text-sm mb-1">October 2018 – July 2021</h4>
@@ -807,9 +789,10 @@
 
             <section id="publications"
                 class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full scroll-mt-28">
-                <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100" data-aos="fade-up">
-                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl px-7 pt-10 md:p-20">
-                        <h2 class="card-title text-3xl font-bold py-5"><i data-lucide="book-open"
+                <div class="overflow-x-auto w-full rounded-2xl bg-base-100" data-aos="fade-up">
+                    <div class="card-body w-100 shadow-sm border border-base-300 rounded-2xl px-7 pt-10 md:p-20">
+                        <span class="kicker">Research Output</span>
+                        <h2 class="card-title text-3xl font-bold pb-5"><i data-lucide="book-open"
                                 class="size-8"></i>Publications</h2>
                         <h3 class="text-2xl font-semibold pb-3">First Authorships</h3>
                         <div class="overflow-x-auto">
@@ -832,9 +815,9 @@
                                         <td>Proceedings of the 24th Workshop on Biomedical Language Processing</td>
                                         <td>01/08/2025</td>
                                         <td><a href="https://aclanthology.org/2025.bionlp-1.29/"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_peteval.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Premature mortality analysis of 52,000 deceased cats and dogs exposes
@@ -844,9 +827,9 @@
                                         <td>Scientific Reports</td>
                                         <td>20/09/2024</td>
                                         <td><a href="https://doi.org/10.1038/s41598-024-77385-8"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_mortality.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Explainable text-tabular models for predicting mortality risk in
@@ -856,9 +839,9 @@
                                         <td>Scientific Reports</td>
                                         <td>20/06/2024</td>
                                         <td><a href="https://doi.org/10.1038/s41598-024-64551-1"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_explainability.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>PetBERT: automated ICD-11 syndromic disease coding for outbreak
@@ -868,9 +851,9 @@
                                         <td>Scientific Reports</td>
                                         <td>21/10/2023</td>
                                         <td><a href="https://doi.org/10.1038/s41598-023-45155-7"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_petbert.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>A multinational survey of companion animal veterinary clinicians: How
@@ -880,9 +863,9 @@
                                         <td>The Veterinary Journal</td>
                                         <td>23/09/2023</td>
                                         <td><a href="https://doi.org/10.1016/j.tvjl.2023.106045"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_stewardship.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Seasonality and other risk factors for fleas infestations in domestic
@@ -891,10 +874,10 @@
                                         </td>
                                         <td>Medical and Veterinary Entomology</td>
                                         <td>09/01/2023</td>
-                                        <td><a href="https://doi.org/10.1111/mve.12636" class="btn btn-primary">Link</a>
+                                        <td><a href="https://doi.org/10.1111/mve.12636" class="btn btn-sm btn-outline btn-primary">Link</a>
                                         </td>
                                         <td><a href="assets/papers/sean_farrell_fleas.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Seasonality and risk factors for myxomatosis in pet rabbits in Great
@@ -903,9 +886,9 @@
                                         <td>Preventive Veterinary Medicine</td>
                                         <td>08/02/2020</td>
                                         <td><a href="https://doi.org/10.1016/j.prevetmed.2020.104924"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_rabbits.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -934,7 +917,7 @@
                                         <td>Nature Communications Medicine</td>
                                         <td>-13/06/2026</td>
                                         <td>-</td>
-                                        <td><a href="https://www.nature.com/articles/s43856-026-01682-8" class="btn btn-primary">pdf</a></td>
+                                        <td><a href="https://www.nature.com/articles/s43856-026-01682-8" class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Comprehensive representation of health-related phenotypes in one million
@@ -943,7 +926,7 @@
                                         <td>Journal of Big Data</td>
                                         <td>12/01/2026</td>
                                         <td>-</td>
-                                        <td><a href="#" class="btn btn-disabled">pdf</a></td>
+                                        <td><a href="#" class="btn btn-sm btn-disabled">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Text mining for disease surveillance in veterinary clinical data: part
@@ -953,9 +936,9 @@
                                         <td>Frontiers in Veterinary Science</td>
                                         <td>22/08/2024</td>
                                         <td><a href="https://doi.org/10.3389/fvets.2024.1352726"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_review_p2.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Text mining for disease surveillance in veterinary clinical data: part
@@ -965,9 +948,9 @@
                                         <td>Frontiers in Veterinary Science</td>
                                         <td>23/01/2024</td>
                                         <td><a href="https://doi.org/10.3389/fvets.2024.1352239"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_review_p1.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Evaluating ChatGPT text mining of clinical records for companion animal
@@ -976,10 +959,10 @@
                                             et al.</td>
                                         <td>The Veterinary Record</td>
                                         <td>06/12/2023</td>
-                                        <td><a href="https://doi.org/10.1002/vetr.3669" class="btn btn-primary">Link</a>
+                                        <td><a href="https://doi.org/10.1002/vetr.3669" class="btn btn-sm btn-outline btn-primary">Link</a>
                                         </td>
                                         <td><a href="assets/papers/sean_farrell_chatgpt.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>SARS-CoV-2 neutralising antibodies in dogs and cats in the United
@@ -989,9 +972,9 @@
                                         <td>Current Research in Virological Science</td>
                                         <td>04/08/2021</td>
                                         <td><a href="https://doi.org/10.1016/j.crviro.2021.100011"
-                                                class="btn btn-primary">Link</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">Link</a></td>
                                         <td><a href="assets/papers/sean_farrell_covid19.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1020,7 +1003,7 @@
                                         <td>In Review</td>
                                         <td>-</td>
                                         <td>-</td>
-                                        <td><a href="#" class="btn btn-disabled">pdf</a></td>
+                                        <td><a href="#" class="btn btn-sm btn-disabled">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>PetHarbor: A Standardised Framework for Sharing Veterinary Electronic
@@ -1029,7 +1012,7 @@
                                         <td>In Review</td>
                                         <td>-</td>
                                         <td>-</td>
-                                        <td><a href="#" class="btn btn-disabled">pdf</a></td>
+                                        <td><a href="#" class="btn btn-sm btn-disabled">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Automated Disease Classification of Veterinary Clinical Narratives for
@@ -1039,7 +1022,7 @@
                                         <td>In Review</td>
                                         <td>-</td>
                                         <td>-</td>
-                                        <td><a href="#" class="btn btn-disabled">pdf</a></td>
+                                        <td><a href="#" class="btn btn-sm btn-disabled">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Quantifying and contextualising antimicrobial usage using automated
@@ -1049,7 +1032,7 @@
                                         <td>In Review</td>
                                         <td>-</td>
                                         <td>-</td>
-                                        <td><a href="#" class="btn btn-disabled">pdf</a></td>
+                                        <td><a href="#" class="btn btn-sm btn-disabled">pdf</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1061,8 +1044,9 @@
 
             <section id="presentations"
                 class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full scroll-mt-28">
-                <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100" data-aos="fade-up">
-                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl px-7 pt-10 md:p-20">
+                <div class="overflow-x-auto w-full rounded-2xl bg-base-100" data-aos="fade-up">
+                    <div class="card-body w-100 shadow-sm border border-base-300 rounded-2xl px-7 pt-10 md:p-20">
+                        <span class="kicker">Invited Talks &amp; Posters</span>
                         <h2 class="card-title text-3xl font-bold pb-5"><i data-lucide="presentation"
                                 class="size-8"></i>Conferences and Presentations</h2>
                         <div class="overflow-x-auto">
@@ -1090,7 +1074,7 @@
                                         <td>17/05/2025</td>
                                         <td>Oral</td>
                                         <td><a href="assets/ppt/SAVY_petharbor.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Unravelling HPCIA prescription trends in veterinary healthcare:
@@ -1102,7 +1086,7 @@
                                         <td>Virginia-Tech University, USA</td>
                                         <td>13/09/2024</td>
                                         <td>Oral</td>
-                                        <td><a href="assets/ppt/AVI_HPCIA.pptx" download class="btn btn-primary">ppt</a>
+                                        <td><a href="assets/ppt/AVI_HPCIA.pptx" download class="btn btn-sm btn-outline btn-primary">ppt</a>
                                         </td>
                                     </tr>
                                     <tr class="hover">
@@ -1112,7 +1096,7 @@
                                         <td>19/04/2024</td>
                                         <td>Oral</td>
                                         <td><a href="assets/ppt/SAVY_HPCIA.pptx" download
-                                                class="btn btn-primary">ppt</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">ppt</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk
@@ -1123,7 +1107,7 @@
                                         <td>22/07/2024</td>
                                         <td>Oral</td>
                                         <td><a href="assets/ppt/DTP_outbreak.pptx" download
-                                                class="btn btn-primary">ppt</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">ppt</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Where are all the antimicrobials being used? LLM’s for
@@ -1135,7 +1119,7 @@
                                         <td>13/06/2024</td>
                                         <td>Poster</td>
                                         <td><a href="assets/posters/healtac_2024.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Survey Results on what do clinicians want from their
@@ -1148,7 +1132,7 @@
                                         <td>University of Copenhagen, Netherlands</td>
                                         <td>07/03/2024</td>
                                         <td>Oral</td>
-                                        <td><a href='' download class="btn btn-disabled">ppt</a></td>
+                                        <td><a href='' download class="btn btn-sm btn-disabled">ppt</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Syndromic Disease Classification of Veterinary EHR Notes for
@@ -1160,7 +1144,7 @@
                                         <td>15/06/2023</td>
                                         <td>Poster</td>
                                         <td><a href="assets/posters/healtac_2023.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
 
                                     <tr class="hover">
@@ -1173,7 +1157,7 @@
                                         <td>07/08/2022</td>
                                         <td>Poster</td>
                                         <td><a href="assets/posters/bristol_2022.pdf" download
-                                                class="btn btn-primary">pdf</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">pdf</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td> <span class="badge badge-lg badge-warning ml-2">🏆 Best Talk
@@ -1184,7 +1168,7 @@
                                         <td>21/07/2022</td>
                                         <td>Oral</td>
                                         <td><a href="assets/ppt/DTP_mortality.pptx" download
-                                                class="btn btn-primary">ppt</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">ppt</a></td>
                                     </tr>
                                     <tr class="hover">
                                         <td>Current Status of multinational survey of companion animal
@@ -1200,7 +1184,7 @@
                                         <td>13/05/2022</td>
                                         <td>Oral</td>
                                         <td><a href="assets/ppt/ENOVAT_greece.pptx" download
-                                                class="btn btn-primary">ppt</a></td>
+                                                class="btn btn-sm btn-outline btn-primary">ppt</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1212,16 +1196,17 @@
 
             <section id="teaching"
                 class="card-body flex flex-col justify-center items-center m-0 p-2 pb-10 sm:justify-self-end lg:justify-self-auto w-full scroll-mt-28">
-                <div class="overflow-x-auto w-full shadow-2xl rounded bg-base-100" data-aos="fade-up">
-                    <div class="card-body w-100 shadow-2xl border border-grey rounded-2xl px-7 pt-10 md:p-20">
-                        <h2 class="card-title text-3xl font-bold  py-5"><i data-lucide="book"
+                <div class="overflow-x-auto w-full rounded-2xl bg-base-100" data-aos="fade-up">
+                    <div class="card-body w-100 shadow-sm border border-base-300 rounded-2xl px-7 pt-10 md:p-20">
+                        <span class="kicker">Education &amp; Mentoring</span>
+                        <h2 class="card-title text-3xl font-bold pb-5"><i data-lucide="book"
                                 class="size-8"></i>Teaching</h2>
 
 
                         <div class="space-y-14">
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Natural Language Processing @
@@ -1243,7 +1228,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Natural Language Analysis @
@@ -1263,7 +1248,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Computational Thinking @
@@ -1284,7 +1269,7 @@
                             </div>
 
                             <div
-                                class="relative pl-6 border-l-4 border-primary hover:border-secondary transition-colors duration-300">
+                                class="relative timeline-item">
                                 <div class="ml-2">
                                     <h3 class="text-2xl font-semibold">
                                         Introduction to Natural Language Processing @
@@ -1313,27 +1298,28 @@
             </section>
             <section id="contact"></section>
             <section class="relative w-full py-20 flex justify-center items-center overflow-hidden">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-30 pointer-events-none">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-60 pointer-events-none">
                     <div
-                        class="absolute top-10 left-1/4 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
+                        class="absolute top-10 left-1/4 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
                     </div>
                     <div
-                        class="absolute top-10 right-1/4 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
+                        class="absolute top-10 right-1/4 w-72 h-72 bg-secondary/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
                     </div>
                 </div>
 
                 <div class="relative z-10 w-full max-w-3xl mx-4" data-aos="fade-up" data-aos-duration="800">
                     <div
-                        class="bg-white/80 backdrop-blur-xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl p-8 md:p-12 text-center">
+                        class="bg-base-100/80 backdrop-blur-xl border border-base-300 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl p-8 md:p-12 text-center">
 
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 tracking-tight">
+                        <span class="kicker justify-center">Get In Touch</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4 tracking-tight">
                             Let's Collaborate
                         </h2>
 
-                        <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full mb-6">
+                        <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6">
                         </div>
 
-                        <p class="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-10">
+                        <p class="text-lg text-base-content/70 leading-relaxed max-w-2xl mx-auto mb-10">
                             I’m always happy to connect—whether you’re interested in NLP collaborations,
                             public health initiatives, or just want to chat about research ideas.
                         </p>
@@ -1341,8 +1327,8 @@
                         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
 
                             <a href="mailto:sean.farrell2@durham.ac.uk"
-                                class="group relative inline-flex items-center justify-center px-6 py-3 w-full sm:w-auto bg-slate-900 text-white font-medium rounded-xl transition-all duration-200 hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
-                                <svg class="w-5 h-5 mr-2 text-slate-300 group-hover:text-white transition-colors"
+                                class="group relative inline-flex items-center justify-center px-6 py-3 w-full sm:w-auto bg-primary text-primary-content font-medium rounded-xl transition-all duration-200 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                                <svg class="w-5 h-5 mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1353,8 +1339,8 @@
                             </a>
 
                             <a href="https://www.linkedin.com/in/seanoliverfarrell"
-                                class="group relative inline-flex items-center justify-center px-6 py-3 w-full sm:w-auto bg-blue-600 text-white font-medium rounded-xl transition-all duration-200 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
-                                <svg class="w-5 h-5 mr-2 text-blue-100 group-hover:text-white transition-colors"
+                                class="group relative inline-flex items-center justify-center px-6 py-3 w-full sm:w-auto bg-secondary text-secondary-content font-medium rounded-xl transition-all duration-200 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+                                <svg class="w-5 h-5 mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
                                     fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -1363,7 +1349,7 @@
                             </a>
 
                             <button id="copy-email" onclick="copyToClipboard()"
-                                class="group relative inline-flex items-center justify-center px-6 py-3 w-full sm:w-auto bg-white border border-slate-200 text-slate-600 font-medium rounded-xl transition-all duration-200 hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200">
+                                class="group relative inline-flex items-center justify-center px-6 py-3 w-full sm:w-auto bg-base-100 border border-base-300 text-base-content/70 font-medium rounded-xl transition-all duration-200 hover:bg-base-200 hover:border-base-content/20 hover:text-base-content focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-base-300">
                                 <span id="copy-icon">
                                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
